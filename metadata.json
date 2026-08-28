@@ -1,0 +1,8 @@
+{
+  "name": "Dossiê do Extremismo: O Que a Extrema Direita Fez no Brasil",
+  "description": "Memorial e arquivo documental dos escândalos, investigações, falas absurdas, o caso Banco Master, os inquéritos da PF e a defesa da democracia para as eleições de 2026.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

@@ -1,0 +1,1761 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dossiê do Extremismo: O Que a Extrema Direita Fez no Brasil</title>
+    <meta name="description" content="Arquivo documental e memorial interativo dos escândalos, investigações, falas absurdas, o caso Banco Master, a tentativa de golpe e os inquéritos que atingiram o clã Bolsonaro e seus aliados.">
+    
+    <!-- Open Graph / Meta -->
+    <meta property="og:title" content="Dossiê do Extremismo: O Que a Extrema Direita Fez no Brasil">
+    <meta property="og:description" content="Arquivo documental dos escândalos, falas vergonhosas, inquéritos e crimes da extrema direita para não esquecer em 2026.">
+    <meta property="og:type" content="website">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            red: '#ef4444',
+                            crimson: '#dc2626',
+                            dark: '#090d16',
+                            card: '#111726',
+                            border: '#1f293d',
+                            accent: '#f59e0b',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'ui-sans-serif', 'system-ui', '-apple-system', 'sans-serif'],
+                        mono: ['"JetBrains Mono"', 'monospace'],
+                        display: ['"Space Grotesk"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Lucide Icons CDN -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #080c14;
+            color: #f1f5f9;
+        }
+        .font-display { font-family: 'Space Grotesk', sans-serif; }
+        .font-mono { font-family: 'JetBrains Mono', monospace; }
+        
+        .reveal {
+            opacity: 0;
+            transform: translateY(28px);
+            transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #090d16;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #25334d;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #dc2626;
+        }
+
+        .gradient-border {
+            position: relative;
+            background: linear-gradient(180deg, rgba(239,68,68,0.15) 0%, rgba(17,23,38,0.6) 100%);
+        }
+        
+        .tag-pulse {
+            animation: pulse-border 2.5s infinite;
+        }
+        @keyframes pulse-border {
+            0%, 100% { border-color: rgba(239, 68, 68, 0.4); box-shadow: 0 0 15px rgba(239, 68, 68, 0.1); }
+            50% { border-color: rgba(239, 68, 68, 0.8); box-shadow: 0 0 25px rgba(239, 68, 68, 0.25); }
+        }
+    </style>
+</head>
+<body class="selection:bg-red-500 selection:text-white antialiased">
+
+    <!-- Top Urgent Banner -->
+    <aside aria-label="Alerta Democrático" class="bg-gradient-to-r from-red-950 via-red-900 to-slate-950 border-b border-red-800/40 text-xs py-2.5 px-4 text-center text-red-200 font-medium tracking-wide flex items-center justify-center gap-3">
+        <span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded bg-red-600/30 border border-red-500/40 text-red-300 font-bold uppercase text-[10px]">
+            <i data-lucide="alert-octagon" class="w-3 h-3 text-red-400"></i> Memorial Cívico
+        </span>
+        <span>Eleições 2026: Conheça os fatos, documentos oficiais da PF e investigações judiciais para não repetir o passado.</span>
+    </aside>
+
+    <!-- Navigation Header -->
+    <header class="sticky top-0 z-50 bg-[#090d16]/90 backdrop-blur-xl border-b border-slate-800/80">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            <a href="#" class="flex items-center gap-3 group">
+                <div class="w-9 h-9 rounded-xl bg-gradient-to-br from-red-600 to-amber-600 flex items-center justify-center shadow-lg shadow-red-950/50 group-hover:scale-105 transition-transform">
+                    <i data-lucide="scale" class="w-5 h-5 text-white"></i>
+                </div>
+                <div>
+                    <div class="text-base font-bold tracking-tight text-white flex items-center gap-2">
+                        DOSSIÊ DO EXTREMISMO
+                        <span class="text-[10px] bg-red-500/20 text-red-400 px-2 py-0.5 rounded-full border border-red-500/30 uppercase font-mono">BR</span>
+                    </div>
+                    <div class="text-[11px] text-slate-400 font-mono">MEMORIAL DE FATOS & INVESTIGAÇÕES</div>
+                </div>
+            </a>
+
+            <!-- Desktop Nav Links -->
+            <nav class="hidden md:flex items-center gap-6 text-sm font-medium text-slate-300">
+                <a href="#bolsonaro-prisao" class="hover:text-red-400 transition-colors flex items-center gap-1.5">
+                    <i data-lucide="gavel" class="w-4 h-4 text-red-500"></i> Prisão & Inquéritos
+                </a>
+                <a href="#linha-do-tempo" class="hover:text-red-400 transition-colors flex items-center gap-1.5">
+                    <i data-lucide="git-commit" class="w-4 h-4 text-red-500"></i> Linha do Tempo
+                </a>
+                <a href="#flavio-master" class="hover:text-amber-400 transition-colors flex items-center gap-1.5">
+                    <i data-lucide="landmark" class="w-4 h-4 text-amber-500"></i> Flávio & Caso Master
+                </a>
+                <a href="#mural-falas" class="hover:text-red-400 transition-colors flex items-center gap-1.5">
+                    <i data-lucide="quote" class="w-4 h-4 text-orange-400"></i> Falas Absurdas
+                </a>
+                <a href="#setores-desastre" class="hover:text-slate-100 transition-colors flex items-center gap-1.5">
+                    <i data-lucide="flame" class="w-4 h-4 text-rose-500"></i> O Desastre
+                </a>
+                <a href="#quiz-memoria" class="hover:text-indigo-400 transition-colors flex items-center gap-1.5">
+                    <i data-lucide="help-circle" class="w-4 h-4 text-indigo-400"></i> Quiz da Memória
+                </a>
+                <a href="#eleicoes-2026" class="px-3.5 py-1.5 rounded-lg bg-red-600 hover:bg-red-500 text-white font-semibold shadow-md shadow-red-950 transition-all text-xs flex items-center gap-1.5">
+                    <i data-lucide="vote" class="w-3.5 h-3.5"></i> Eleições 2026
+                </a>
+            </nav>
+
+            <!-- Share Button CTA -->
+            <div class="flex items-center gap-2">
+                <button onclick="openShareModal()" class="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 border border-slate-700 text-xs font-semibold text-slate-200 transition-colors">
+                    <i data-lucide="share-2" class="w-3.5 h-3.5 text-red-400"></i> Compartilhar
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative pt-16 pb-24 overflow-hidden border-b border-slate-800">
+        <!-- Ambient Glow FX -->
+        <div class="absolute inset-0 pointer-events-none">
+            <div class="absolute -top-32 left-1/2 -translate-x-1/2 w-[700px] h-[400px] bg-red-600/15 rounded-full blur-[140px]"></div>
+            <div class="absolute top-1/2 left-1/4 w-[350px] h-[350px] bg-amber-600/10 rounded-full blur-[120px]"></div>
+            <div class="absolute top-1/3 right-1/4 w-[400px] h-[400px] bg-indigo-600/10 rounded-full blur-[140px]"></div>
+            <div class="absolute inset-0 bg-[radial-gradient(#1e293b_1px,transparent_1px)] [background-size:24px_24px] opacity-30"></div>
+        </div>
+
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+            
+            <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-red-950/80 border border-red-700/60 text-red-300 text-xs font-bold uppercase tracking-wider mb-8 tag-pulse">
+                <i data-lucide="shield-alert" class="w-4 h-4 text-red-400"></i>
+                Arquivo Histórico Documentado • 2018 - 2026
+            </div>
+
+            <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight font-display text-white mb-8 leading-[1.08]">
+                Tudo o Que a Extrema Direita <br class="hidden sm:block">
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-red-500 via-orange-400 to-amber-300">
+                    Fez Contra o Povo Brasileiro.
+                </span>
+            </h1>
+
+            <p class="text-slate-300 text-lg sm:text-xl max-w-3xl mx-auto mb-10 leading-relaxed font-light">
+                A tentativa de golpe de Estado, o desvio de joias, o escândalo do <strong class="text-amber-300 font-semibold">Banco Master e Flávio Bolsonaro</strong>, as 700 mil mortes na pandemia e as frases mais estarrecedoras dos aliados. <em>Um dossiê factual para quem não tem memória curta.</em>
+            </p>
+
+            <!-- Quick Impact Counters -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto mb-12 text-left">
+                <div class="bg-[#111726]/90 border border-red-900/40 p-4 rounded-2xl">
+                    <div class="text-red-400 font-mono text-2xl sm:text-3xl font-extrabold flex items-center gap-1.5">
+                        <i data-lucide="gavel" class="w-5 h-5"></i> +4 Inquéritos
+                    </div>
+                    <div class="text-xs text-slate-400 mt-1">PF indiciou Bolsonaro por Golpe, Joias e Vacinas</div>
+                </div>
+                <div class="bg-[#111726]/90 border border-amber-900/40 p-4 rounded-2xl">
+                    <div class="text-amber-400 font-mono text-2xl sm:text-3xl font-extrabold flex items-center gap-1.5">
+                        <i data-lucide="landmark" class="w-5 h-5"></i> R$ 6 Milhões
+                    </div>
+                    <div class="text-xs text-slate-400 mt-1">Mansão de Flávio, caso Master e 51 imóveis em dinheiro</div>
+                </div>
+                <div class="bg-[#111726]/90 border border-red-900/40 p-4 rounded-2xl">
+                    <div class="text-red-400 font-mono text-2xl sm:text-3xl font-extrabold flex items-center gap-1.5">
+                        <i data-lucide="heart-crack" class="w-5 h-5"></i> +700.000
+                    </div>
+                    <div class="text-xs text-slate-400 mt-1">Vidas perdidas com cloroquina, atraso de vacinas e deboche</div>
+                </div>
+                <div class="bg-[#111726]/90 border border-indigo-900/40 p-4 rounded-2xl">
+                    <div class="text-indigo-400 font-mono text-2xl sm:text-3xl font-extrabold flex items-center gap-1.5">
+                        <i data-lucide="ban" class="w-5 h-5"></i> Inelegível
+                    </div>
+                    <div class="text-xs text-slate-400 mt-1">Condenado pelo TSE até 2030 por mentiras contra o Brasil</div>
+                </div>
+            </div>
+
+            <!-- Election Countdown Bar -->
+            <div class="max-w-2xl mx-auto bg-gradient-to-b from-slate-900/90 to-slate-950/90 border border-slate-800 p-6 rounded-3xl backdrop-blur-md shadow-2xl">
+                <div class="flex items-center justify-between mb-4">
+                    <span class="text-xs font-bold font-mono uppercase text-slate-400 flex items-center gap-2">
+                        <i data-lucide="clock" class="w-4 h-4 text-red-500 animate-spin"></i>
+                        Contagem Regressiva para as Eleições 2026 (1º Turno)
+                    </span>
+                    <span class="text-xs bg-red-950 text-red-400 px-2.5 py-0.5 rounded-full border border-red-800/60 font-semibold font-mono">04 Outubro 2026</span>
+                </div>
+                <div class="grid grid-cols-4 gap-3 text-center">
+                    <div class="bg-black/50 border border-slate-800/80 p-3 rounded-xl">
+                        <div id="cd-days" class="text-2xl sm:text-4xl font-extrabold text-white font-mono">0</div>
+                        <div class="text-[10px] uppercase tracking-wider text-slate-400 font-semibold mt-1">Dias</div>
+                    </div>
+                    <div class="bg-black/50 border border-slate-800/80 p-3 rounded-xl">
+                        <div id="cd-hours" class="text-2xl sm:text-4xl font-extrabold text-white font-mono">0</div>
+                        <div class="text-[10px] uppercase tracking-wider text-slate-400 font-semibold mt-1">Horas</div>
+                    </div>
+                    <div class="bg-black/50 border border-slate-800/80 p-3 rounded-xl">
+                        <div id="cd-mins" class="text-2xl sm:text-4xl font-extrabold text-white font-mono">0</div>
+                        <div class="text-[10px] uppercase tracking-wider text-slate-400 font-semibold mt-1">Minutos</div>
+                    </div>
+                    <div class="bg-black/50 border border-slate-800/80 p-3 rounded-xl">
+                        <div id="cd-secs" class="text-2xl sm:text-4xl font-extrabold text-red-400 font-mono">0</div>
+                        <div class="text-[10px] uppercase tracking-wider text-slate-400 font-semibold mt-1">Segundos</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quick Filter and Search -->
+            <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-3">
+                <div class="relative w-full max-w-md">
+                    <i data-lucide="search" class="w-4 h-4 absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-400"></i>
+                    <input 
+                        type="text" 
+                        id="search-input" 
+                        oninput="filterDossier()" 
+                        placeholder="Busque por: 'Master', 'Joias', 'Coveiro', '8 de Janeiro', 'Manaus'..."
+                        class="w-full bg-slate-900/90 border border-slate-700 text-slate-200 placeholder-slate-500 rounded-xl pl-10 pr-4 py-2.5 text-sm focus:outline-none focus:border-red-500 focus:ring-1 focus:ring-red-500"
+                    >
+                </div>
+                <div class="flex items-center gap-2 overflow-x-auto w-full sm:w-auto pb-2 sm:pb-0">
+                    <button onclick="setCategoryFilter('all')" class="category-btn active px-3.5 py-2 rounded-xl text-xs font-semibold bg-red-600 text-white transition-all">Todos</button>
+                    <button onclick="setCategoryFilter('bolsonaro')" class="category-btn px-3.5 py-2 rounded-xl text-xs font-semibold bg-slate-800 text-slate-300 hover:bg-slate-700 transition-all">Bolsonaro & PF</button>
+                    <button onclick="setCategoryFilter('timeline')" class="category-btn px-3.5 py-2 rounded-xl text-xs font-semibold bg-slate-800 text-slate-300 hover:bg-slate-700 transition-all">Linha do Tempo</button>
+                    <button onclick="setCategoryFilter('flavio')" class="category-btn px-3.5 py-2 rounded-xl text-xs font-semibold bg-slate-800 text-slate-300 hover:bg-slate-700 transition-all">Flávio & Master</button>
+                    <button onclick="setCategoryFilter('falas')" class="category-btn px-3.5 py-2 rounded-xl text-xs font-semibold bg-slate-800 text-slate-300 hover:bg-slate-700 transition-all">Falas Absurdas</button>
+                    <button onclick="setCategoryFilter('pandemia')" class="category-btn px-3.5 py-2 rounded-xl text-xs font-semibold bg-slate-800 text-slate-300 hover:bg-slate-700 transition-all">Pandemia</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content Container -->
+    <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 space-y-24">
+
+        <!-- SECTION 1: A PRISÃO E OS INQUÉRITOS DE JAIR BOLSONARO -->
+        <section id="bolsonaro-prisao" class="scroll-mt-24 reveal dossier-item" data-category="bolsonaro">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 pb-4 border-b border-red-900/50 gap-4">
+                <div>
+                    <div class="inline-flex items-center gap-1.5 text-red-500 text-xs font-mono font-bold uppercase tracking-wider mb-2">
+                        <i data-lucide="fingerprint" class="w-4 h-4"></i> Investigação Criminal & Judiciário
+                    </div>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-white font-display">
+                        A Queda de Bolsonaro: Inquéritos, Indiciamentos e Risco Iminente de Prisão
+                    </h2>
+                </div>
+                <div class="text-right">
+                    <span class="text-xs font-mono bg-red-950 text-red-400 px-3 py-1 rounded-full border border-red-800/80">
+                        Polícia Federal & STF
+                    </span>
+                </div>
+            </div>
+
+            <!-- Highlight Summary Box -->
+            <div class="bg-gradient-to-r from-red-950/80 via-[#131b2e] to-slate-900 border-2 border-red-600/50 p-6 sm:p-8 rounded-3xl mb-8 relative overflow-hidden shadow-2xl">
+                <div class="absolute -right-10 -bottom-10 opacity-10 pointer-events-none">
+                    <i data-lucide="gavel" class="w-80 h-80 text-red-500"></i>
+                </div>
+                <div class="relative z-10">
+                    <div class="flex items-center gap-3 text-red-400 font-bold mb-3">
+                        <i data-lucide="alert-triangle" class="w-6 h-6 animate-bounce"></i>
+                        <span class="text-sm uppercase tracking-widest font-mono">Dossiê Judicial do Ex-Presidente</span>
+                    </div>
+                    <h3 class="text-2xl sm:text-3xl font-bold text-white mb-4">
+                        Quatro indiciamentos formais da PF, passaporte retido e inelegibilidade decretada
+                    </h3>
+                    <p class="text-slate-300 leading-relaxed text-sm sm:text-base mb-6 max-w-4xl">
+                        Jair Messias Bolsonaro tornou-se o primeiro ex-presidente na história recente do Brasil investigado e formalmente indiciado por planejar a abolição violenta do Estado Democrático de Direito, falsificar registros médicos internacionais e liderar uma organização criminosa para desviar patrimônio público de alto valor.
+                    </p>
+                    <div class="flex flex-wrap gap-2 text-xs font-mono">
+                        <span class="px-3 py-1 rounded-lg bg-red-900/60 text-red-200 border border-red-700/50">Inquérito do Golpe de Estado</span>
+                        <span class="px-3 py-1 rounded-lg bg-red-900/60 text-red-200 border border-red-700/50">Operação Contragolpe / Punhal Verde e Amarelo</span>
+                        <span class="px-3 py-1 rounded-lg bg-red-900/60 text-red-200 border border-red-700/50">Escândalo das Joias Sauditas</span>
+                        <span class="px-3 py-1 rounded-lg bg-red-900/60 text-red-200 border border-red-700/50">Fraude em Cartões de Vacina</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Crimes Cards Grid -->
+            <div class="grid md:grid-cols-2 gap-6">
+                <!-- Card 1: A Trama Golpista -->
+                <div class="bg-[#111726] border border-slate-800 hover:border-red-600/60 p-6 sm:p-7 rounded-2xl transition-all shadow-lg flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="p-2.5 rounded-xl bg-red-950/80 border border-red-800 text-red-400">
+                                <i data-lucide="skull" class="w-5 h-5"></i>
+                            </span>
+                            <span class="text-[11px] font-mono bg-slate-900 text-slate-400 px-2.5 py-1 rounded border border-slate-800">
+                                Art. 359-M e 359-L do Código Penal
+                            </span>
+                        </div>
+                        <h4 class="text-xl font-bold text-white mb-2">1. A Trama do Golpe & Plano de Assassinato</h4>
+                        <p class="text-slate-300 text-sm leading-relaxed mb-4">
+                            O relatório final de mais de 800 páginas da Polícia Federal comprovou a participação ativa de Bolsonaro na elaboração da <strong>"Minuta do Golpe"</strong>, na edição do decreto de ruptura institucional e na articulação com militares dos "Kids Pretos". A PF desbaratou a operação <strong class="text-red-400">"Punhal Verde e Amarelo"</strong>, que previa o sequestro e assassinato do presidente eleito Lula, do vice Geraldo Alckmin e do ministro Alexandre de Moraes para manter Bolsonaro no poder.
+                        </p>
+                    </div>
+                    <div class="pt-4 border-t border-slate-800/80 flex items-center justify-between text-xs text-slate-400">
+                        <span class="text-red-400 font-semibold font-mono">Pena prevista: até 28 anos</span>
+                        <button onclick="openEvidenceModal('golpe')" class="text-slate-300 hover:text-white underline flex items-center gap-1">
+                            Ver provas da PF <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Card 2: Contrabando e Desvio das Joias -->
+                <div class="bg-[#111726] border border-slate-800 hover:border-amber-600/60 p-6 sm:p-7 rounded-2xl transition-all shadow-lg flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="p-2.5 rounded-xl bg-amber-950/80 border border-amber-800 text-amber-400">
+                                <i data-lucide="gem" class="w-5 h-5"></i>
+                            </span>
+                            <span class="text-[11px] font-mono bg-slate-900 text-slate-400 px-2.5 py-1 rounded border border-slate-800">
+                                Peculato, Lavagem & Associação Criminosa
+                            </span>
+                        </div>
+                        <h4 class="text-xl font-bold text-white mb-2">2. O Esquema das Joias e Relógios Rolex</h4>
+                        <p class="text-slate-300 text-sm leading-relaxed mb-4">
+                            Bolsonaro usou a estrutura da Presidência e aviões oficiais da FAB para levar kits de joias cravejadas de diamantes e relógios de luxo (Rolex, Chopard, Patek Philippe) presenteados por monarquias árabes para os EUA. O material foi vendido em leilões em Miami e Nova York pelo general Lourena Cid e o tenente-coronel Mauro Cid. Quando a imprensa descobriu, o advogado da família, Frederick Wassef, viajou aos EUA para recomprar o relógio em dinheiro vivo e tentar enganar o Tribunal de Contas da União.
+                        </p>
+                    </div>
+                    <div class="pt-4 border-t border-slate-800/80 flex items-center justify-between text-xs text-slate-400">
+                        <span class="text-amber-400 font-semibold font-mono">Valor desviado: > R$ 6,8 milhões</span>
+                        <button onclick="openEvidenceModal('joias')" class="text-slate-300 hover:text-white underline flex items-center gap-1">
+                            Ver recibos e áudios <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Card 3: Falsificação de Cartões de Vacina -->
+                <div class="bg-[#111726] border border-slate-800 hover:border-red-600/60 p-6 sm:p-7 rounded-2xl transition-all shadow-lg flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="p-2.5 rounded-xl bg-rose-950/80 border border-rose-800 text-rose-400">
+                                <i data-lucide="syringe" class="w-5 h-5"></i>
+                            </span>
+                            <span class="text-[11px] font-mono bg-slate-900 text-slate-400 px-2.5 py-1 rounded border border-slate-800">
+                                Inserção de Dados Falsos & Fraude no SUS
+                            </span>
+                        </div>
+                        <h4 class="text-xl font-bold text-white mb-2">3. A Falsificação do Certificado de Vacina</h4>
+                        <p class="text-slate-300 text-sm leading-relaxed mb-4">
+                            Enquanto fazia campanha pública contra as vacinas e afirmava que quem tomasse "viraria jacaré" ou "desenvolveria HIV", Bolsonaro ordenou a inserção de registros falsos de doses no sistema do Ministério da Saúde (ConecteSUS) em Duque de Caxias (RJ) para ele e sua filha menor, com o objetivo de burlar as regras sanitárias e viajar aos Estados Unidos no fim de 2022.
+                        </p>
+                    </div>
+                    <div class="pt-4 border-t border-slate-800/80 flex items-center justify-between text-xs text-slate-400">
+                        <span class="text-rose-400 font-semibold font-mono">Indiciado pela PF</span>
+                        <button onclick="openEvidenceModal('vacinas')" class="text-slate-300 hover:text-white underline flex items-center gap-1">
+                            Ver logs do sistema <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Card 4: ABIN Paralela e Gabinete do Ódio -->
+                <div class="bg-[#111726] border border-slate-800 hover:border-indigo-600/60 p-6 sm:p-7 rounded-2xl transition-all shadow-lg flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="p-2.5 rounded-xl bg-indigo-950/80 border border-indigo-800 text-indigo-400">
+                                <i data-lucide="eye-off" class="w-5 h-5"></i>
+                            </span>
+                            <span class="text-[11px] font-mono bg-slate-900 text-slate-400 px-2.5 py-1 rounded border border-slate-800">
+                                Espionagem Ilegal com FirstMile
+                            </span>
+                        </div>
+                        <h4 class="text-xl font-bold text-white mb-2">4. ABIN Paralela: Espionagem Clandestina de Opositores</h4>
+                        <p class="text-slate-300 text-sm leading-relaxed mb-4">
+                            Sob comando do deputado Alexandre Ramagem e com forte influência de Carlos Bolsonaro, a Agência Brasileira de Inteligência foi aparelhada para monitorar ilegalmente a localização de ministros do STF, jornalistas, adversários políticos e até aliados suspeitos. A estrutura também foi usada para fabricar relatórios clandestinos e tentar blindar os filhos de Bolsonaro de investigações das rachadinhas.
+                        </p>
+                    </div>
+                    <div class="pt-4 border-t border-slate-800/80 flex items-center justify-between text-xs text-slate-400">
+                        <span class="text-indigo-400 font-semibold font-mono">+60 mil acessos ilegais</span>
+                        <button onclick="openEvidenceModal('abin')" class="text-slate-300 hover:text-white underline flex items-center gap-1">
+                            Ver relatório da espionagem <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 2: FLÁVIO BOLSONARO, CASO MASTER E RACHADINHAS -->
+        <section id="flavio-master" class="scroll-mt-24 reveal dossier-item" data-category="flavio">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 pb-4 border-b border-amber-900/50 gap-4">
+                <div>
+                    <div class="inline-flex items-center gap-1.5 text-amber-400 text-xs font-mono font-bold uppercase tracking-wider mb-2">
+                        <i data-lucide="landmark" class="w-4 h-4"></i> Operações Financeiras & Escândalos Familiares
+                    </div>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-white font-display">
+                        Flávio Bolsonaro: O Caso Banco Master, a Mansão e as Rachadinhas
+                    </h2>
+                </div>
+                <div>
+                    <span class="text-xs font-mono bg-amber-950 text-amber-300 px-3 py-1 rounded-full border border-amber-800/80">
+                        Investigações Financeiras & COAF
+                    </span>
+                </div>
+            </div>
+
+            <!-- Deep Dive on Banco Master & Flávio -->
+            <div class="grid lg:grid-cols-3 gap-6 mb-8">
+                
+                <!-- Box 1: Caso Master -->
+                <div class="lg:col-span-2 bg-[#111726] border-2 border-amber-500/40 p-6 sm:p-8 rounded-3xl relative overflow-hidden">
+                    <div class="flex items-center gap-3 text-amber-400 mb-4">
+                        <i data-lucide="alert-octagon" class="w-6 h-6"></i>
+                        <span class="font-mono text-xs uppercase tracking-widest font-bold">O Caso Banco Master & Ligações Políticas</span>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-3">
+                        As Conexões do Senador Flávio Bolsonaro com as Operações do Banco Master
+                    </h3>
+                    <p class="text-slate-300 text-sm sm:text-base leading-relaxed mb-4">
+                        Reportagens investigativas e apurações nos bastidores de Brasília expuseram a proximidade e o trânsito do senador <strong>Flávio Bolsonaro (PL-RJ)</strong> com controladores e articuladores ligados ao polêmico <strong>Banco Master</strong> (antigo Banco Máxima). A instituição financeira, envolvida em controvérsias de expansão agressiva, aquisições e suspeitas no mercado financeiro e de precatórios, contou com interlocução política direta em pautas de interesse no Congresso Nacional e órgãos reguladores.
+                    </p>
+                    <div class="bg-amber-950/40 border border-amber-800/60 p-4 rounded-xl text-xs text-amber-200/90 leading-relaxed mb-4">
+                        <strong>O que as investigações apontam:</strong> A atuação de bastidores para favorecimento de pautas financeiras, intermediação com fundos e a teia de relações entre empresários do setor, operadores de precatórios e figuras centrais do bolsonarismo, alimentando suspeitas de advocacia administrativa e tráfico de influência.
+                    </div>
+                    <div class="flex flex-wrap gap-2 text-xs font-mono text-slate-300">
+                        <span class="bg-slate-900 px-2.5 py-1 rounded border border-slate-800">Senado Federal</span>
+                        <span class="bg-slate-900 px-2.5 py-1 rounded border border-slate-800">Mercado de Precatórios</span>
+                        <span class="bg-slate-900 px-2.5 py-1 rounded border border-slate-800">Relações Institucionais</span>
+                    </div>
+                </div>
+
+                <!-- Box 2: Mansão de 6 Milhões -->
+                <div class="bg-[#111726] border border-slate-800 p-6 rounded-3xl flex flex-col justify-between">
+                    <div>
+                        <div class="p-3 bg-amber-950/60 rounded-2xl w-fit text-amber-400 mb-4">
+                            <i data-lucide="home" class="w-6 h-6"></i>
+                        </div>
+                        <h4 class="text-xl font-bold text-white mb-2">A Mansão de R$ 6 Milhões em Brasília</h4>
+                        <p class="text-slate-300 text-xs sm:text-sm leading-relaxed mb-4">
+                            Flávio comprou uma mansão cinematográfica no Setor de Mansões Dom Bosco, área nobre de Brasília, por R$ 5,97 milhões. O financiamento de R$ 3,1 milhões foi concedido pelo Banco de Brasília (BRB) em condições excepcionais, com parcelas mensais que superavam o salário líquido de senador.
+                        </p>
+                    </div>
+                    <div class="pt-3 border-t border-slate-800 text-xs font-mono text-amber-400">
+                        Patrimônio multiplicado em curto período
+                    </div>
+                </div>
+            </div>
+
+            <!-- More Details on Queiroz and 51 Imóveis -->
+            <div class="grid md:grid-cols-2 gap-6">
+                <!-- Rachadinha & Queiroz -->
+                <div class="bg-[#111726] border border-slate-800 p-6 rounded-2xl">
+                    <div class="flex items-center gap-3 text-red-400 mb-3 font-semibold text-sm">
+                        <i data-lucide="dollar-sign" class="w-5 h-5"></i>
+                        O Esquema das Rachadinhas & Fabrício Queiroz
+                    </div>
+                    <p class="text-slate-300 text-xs sm:text-sm leading-relaxed mb-3">
+                        Relatório do COAF revelou movimentação atípica de <strong>R$ 1,2 milhão</strong> na conta do ex-assessor Fabrício Queiroz. O esquema recolhia parte dos salários de servidores fantasmas do gabinete de Flávio na ALERJ. Queiroz pagava mensalidades escolares dos filhos de Flávio, despesas pessoais e depositou <strong>R$ 89 mil em cheques diretamente na conta da ex-primeira-dama Michelle Bolsonaro</strong>.
+                    </p>
+                    <div class="text-[11px] font-mono text-slate-400 bg-slate-900 p-2.5 rounded border border-slate-800">
+                        Loja de chocolates da Kopenhagen no shopping também foi usada para lavar dinheiro vivo, segundo o Ministério Público do RJ.
+                    </div>
+                </div>
+
+                <!-- 51 Imóveis em Dinheiro Vivo -->
+                <div class="bg-[#111726] border border-slate-800 p-6 rounded-2xl">
+                    <div class="flex items-center gap-3 text-amber-400 mb-3 font-semibold text-sm">
+                        <i data-lucide="coins" class="w-5 h-5"></i>
+                        A Compra de 51 Imóveis com Dinheiro em Espécie
+                    </div>
+                    <p class="text-slate-300 text-xs sm:text-sm leading-relaxed mb-3">
+                        Extensa investigação jornalística do portal UOL mapeou os cartórios do Brasil e comprovou que, ao longo de três décadas de vida pública, o clã Bolsonaro (Jair, filhos e ex-esposas) negociou <strong>107 imóveis</strong>, dos quais <strong>pelo menos 51 foram pagos total ou parcialmente com dinheiro vivo</strong>, somando mais de R$ 25,6 milhões em valores corrigidos.
+                    </p>
+                    <div class="text-[11px] font-mono text-slate-400 bg-slate-900 p-2.5 rounded border border-slate-800">
+                        Uso de moeda em espécie na boca do caixa é uma das clássicas tipologias de lavagem de dinheiro e ocultação de patrimônio.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION: LINHA DO TEMPO DOS PRINCIPAIS ESCÂNDALOS (2018-2026) -->
+        <section id="linha-do-tempo" class="scroll-mt-24 reveal dossier-item" data-category="timeline">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 pb-4 border-b border-red-900/50 gap-4">
+                <div>
+                    <div class="inline-flex items-center gap-1.5 text-red-400 text-xs font-mono font-bold uppercase tracking-wider mb-2">
+                        <i data-lucide="git-commit" class="w-4 h-4 text-red-500"></i> Cronologia dos Fatos & Inquéritos (2018 - 2026)
+                    </div>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-white font-display">
+                        Linha do Tempo dos Principais Escândalos (2018–2026)
+                    </h2>
+                </div>
+                <div>
+                    <span class="text-xs font-mono bg-red-950 text-red-300 px-3 py-1 rounded-full border border-red-800/80 flex items-center gap-1.5">
+                        <i data-lucide="arrow-down-up" class="w-3.5 h-3.5 text-red-400"></i> Ordem Cronológica Factual
+                    </span>
+                </div>
+            </div>
+
+            <!-- Timeline Filter Bar -->
+            <div class="flex flex-wrap items-center gap-2 mb-8 bg-slate-900/60 p-2 rounded-2xl border border-slate-800/80" id="timeline-filters">
+                <button onclick="filterTimeline('all')" class="timeline-filter-btn active text-xs font-semibold px-3 py-1.5 rounded-xl bg-red-600 text-white transition-all">Todos os Anos</button>
+                <button onclick="filterTimeline('2018-2019')" class="timeline-filter-btn text-xs font-semibold px-3 py-1.5 rounded-xl bg-slate-800 text-slate-300 hover:bg-slate-700 transition-all">2018–2019: Rachadinhas & Aparelhamento</button>
+                <button onclick="filterTimeline('2020-2021')" class="timeline-filter-btn text-xs font-semibold px-3 py-1.5 rounded-xl bg-slate-800 text-slate-300 hover:bg-slate-700 transition-all">2020–2021: Pandemia, Mansão & CPI</button>
+                <button onclick="filterTimeline('2022')" class="timeline-filter-btn text-xs font-semibold px-3 py-1.5 rounded-xl bg-slate-800 text-slate-300 hover:bg-slate-700 transition-all">2022: Ouro no MEC & Trama Golpista</button>
+                <button onclick="filterTimeline('2023')" class="timeline-filter-btn text-xs font-semibold px-3 py-1.5 rounded-xl bg-slate-800 text-slate-300 hover:bg-slate-700 transition-all">2023: 8 de Janeiro, Inelegibilidade & Joias</button>
+                <button onclick="filterTimeline('2024-2026')" class="timeline-filter-btn text-xs font-semibold px-3 py-1.5 rounded-xl bg-slate-800 text-slate-300 hover:bg-slate-700 transition-all">2024–2026: Indiciamentos da PF & Caso Master</button>
+            </div>
+
+            <!-- Timeline Visual Container with Arrow Connectors -->
+            <div class="relative space-y-8" id="timeline-events-container">
+
+                <!-- 1. DEZEMBRO 2018 -->
+                <div class="timeline-event-card" data-era="2018-2019">
+                    <div class="bg-[#111726] border-2 border-amber-900/60 hover:border-amber-500/80 p-6 sm:p-7 rounded-3xl relative shadow-xl transition-all">
+                        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-4 pb-3 border-b border-slate-800">
+                            <div class="flex items-center gap-3">
+                                <span class="px-3 py-1 rounded-xl bg-amber-950 text-amber-300 font-mono font-extrabold text-sm border border-amber-800/80 flex items-center gap-1.5">
+                                    <i data-lucide="calendar" class="w-3.5 h-3.5"></i> DEZ / 2018
+                                </span>
+                                <span class="text-xs font-mono bg-slate-900 text-slate-400 px-2.5 py-1 rounded-lg border border-slate-800">
+                                    COAF & ALERJ
+                                </span>
+                            </div>
+                            <span class="text-xs font-semibold font-mono text-amber-400">Escândalo Financeiro Inicial</span>
+                        </div>
+                        <div class="grid md:grid-cols-12 gap-6 items-start">
+                            <div class="md:col-span-8">
+                                <h3 class="text-xl font-bold text-white mb-2 flex items-center gap-2">
+                                    <i data-lucide="dollar-sign" class="w-5 h-5 text-amber-400"></i>
+                                    O Relatório do COAF e as Rachadinhas de Fabrício Queiroz
+                                </h3>
+                                <p class="text-slate-300 text-sm leading-relaxed mb-4">
+                                    Pouco antes da posse presidencial, relatório do COAF revelou movimentações financeiras atípicas de <strong>R$ 1,2 milhão</strong> na conta de Fabrício Queiroz, ex-assessor do então deputado estadual Flávio Bolsonaro. O esquema envolvia recolhimento forçado de salários de funcionários fantasmas e o depósito direto de <strong>cheques de R$ 89 mil</strong> na conta da futura primeira-dama Michelle Bolsonaro.
+                                </p>
+                                <div class="flex flex-wrap gap-2 text-xs font-mono">
+                                    <span class="bg-slate-900 px-2.5 py-1 rounded text-slate-300 border border-slate-800">Queiroz & ALERJ</span>
+                                    <span class="bg-slate-900 px-2.5 py-1 rounded text-slate-300 border border-slate-800">Loja de Chocolates Kopenhagen</span>
+                                    <span class="bg-amber-950/70 text-amber-300 px-2.5 py-1 rounded border border-amber-800/60">Denúncia pelo MP-RJ</span>
+                                </div>
+                            </div>
+                            <div class="md:col-span-4 bg-slate-900/90 border border-slate-800 p-4 rounded-2xl text-xs space-y-2">
+                                <div class="text-slate-400 font-mono uppercase font-bold flex items-center gap-1.5 text-[11px] text-amber-400">
+                                    <i data-lucide="alert-circle" class="w-3.5 h-3.5"></i> Desdobramento Penal:
+                                </div>
+                                <p class="text-slate-300 leading-snug">
+                                    Abertura do inquérito das rachadinhas, busca e apreensão e subsequente prisão preventiva de Fabrício Queiroz na casa do advogado Frederick Wassef em Atibaia (SP).
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Direction Arrow -->
+                    <div class="flex justify-center my-3">
+                        <div class="flex items-center gap-2 px-3 py-1 rounded-full bg-slate-900 border border-slate-800 text-slate-400 text-xs font-mono">
+                            <i data-lucide="arrow-down" class="w-4 h-4 text-amber-500 animate-bounce"></i>
+                            <span>Avanço do Aparelhamento Estatal</span>
+                            <i data-lucide="arrow-down" class="w-4 h-4 text-amber-500 animate-bounce"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2. MARÇO A SETEMBRO 2019 -->
+                <div class="timeline-event-card" data-era="2018-2019">
+                    <div class="bg-[#111726] border-2 border-indigo-900/60 hover:border-indigo-500/80 p-6 sm:p-7 rounded-3xl relative shadow-xl transition-all">
+                        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-4 pb-3 border-b border-slate-800">
+                            <div class="flex items-center gap-3">
+                                <span class="px-3 py-1 rounded-xl bg-indigo-950 text-indigo-300 font-mono font-extrabold text-sm border border-indigo-800/80 flex items-center gap-1.5">
+                                    <i data-lucide="calendar" class="w-3.5 h-3.5"></i> 2019 (ANO 1)
+                                </span>
+                                <span class="text-xs font-mono bg-slate-900 text-slate-400 px-2.5 py-1 rounded-lg border border-slate-800">
+                                    FirstMile & Gabinete do Ódio
+                                </span>
+                            </div>
+                            <span class="text-xs font-semibold font-mono text-indigo-400">Espionagem Ilegal & Milícias Digitais</span>
+                        </div>
+                        <div class="grid md:grid-cols-12 gap-6 items-start">
+                            <div class="md:col-span-8">
+                                <h3 class="text-xl font-bold text-white mb-2 flex items-center gap-2">
+                                    <i data-lucide="eye-off" class="w-5 h-5 text-indigo-400"></i>
+                                    Aparelhamento da ABIN Paralela e Ataques Sistemáticos às Instituições
+                                </h3>
+                                <p class="text-slate-300 text-sm leading-relaxed mb-4">
+                                    Com Alexandre Ramagem na direção da ABIN e coordenação política de Carlos Bolsonaro, a estrutura de inteligência da Presidência passou a operar o software israelense <strong>FirstMile</strong> para monitorar a localização física de juízes, parlamentares da oposição e jornalistas. Em setembro, Carlos Bolsonaro publicou que <em>"por vias democráticas a transformação que o Brasil quer não acontecerá"</em>.
+                                </p>
+                                <div class="flex flex-wrap gap-2 text-xs font-mono">
+                                    <span class="bg-slate-900 px-2.5 py-1 rounded text-slate-300 border border-slate-800">Inquérito das Fake News (STF)</span>
+                                    <span class="bg-slate-900 px-2.5 py-1 rounded text-slate-300 border border-slate-800">+60.000 Acessos Clandestinos</span>
+                                    <span class="bg-indigo-950/70 text-indigo-300 px-2.5 py-1 rounded border border-indigo-800/60">Operação Vigilância Aproximada</span>
+                                </div>
+                            </div>
+                            <div class="md:col-span-4 bg-slate-900/90 border border-slate-800 p-4 rounded-2xl text-xs space-y-2">
+                                <div class="text-slate-400 font-mono uppercase font-bold flex items-center gap-1.5 text-[11px] text-indigo-400">
+                                    <i data-lucide="shield-alert" class="w-3.5 h-3.5"></i> Provas da PF:
+                                </div>
+                                <p class="text-slate-300 leading-snug">
+                                    A PF apreendeu arquivos internos mostrando produção de relatórios apócrifos para blindar Flávio e Jair Renan Bolsonaro de investigações em andamento.
+                                </p>
+                                <button onclick="openEvidenceModal('abin')" class="text-indigo-400 hover:text-indigo-300 underline font-semibold flex items-center gap-1 pt-1">
+                                    Ver dossiê ABIN Paralela <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Direction Arrow -->
+                    <div class="flex justify-center my-3">
+                        <div class="flex items-center gap-2 px-3 py-1 rounded-full bg-slate-900 border border-slate-800 text-slate-400 text-xs font-mono">
+                            <i data-lucide="arrow-down" class="w-4 h-4 text-red-500 animate-bounce"></i>
+                            <span>Chegada da Pandemia & Negacionismo</span>
+                            <i data-lucide="arrow-down" class="w-4 h-4 text-red-500 animate-bounce"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3. 2020: PANDEMIA & DESMONTE -->
+                <div class="timeline-event-card" data-era="2020-2021">
+                    <div class="bg-[#111726] border-2 border-red-900/60 hover:border-red-500/80 p-6 sm:p-7 rounded-3xl relative shadow-xl transition-all">
+                        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-4 pb-3 border-b border-slate-800">
+                            <div class="flex items-center gap-3">
+                                <span class="px-3 py-1 rounded-xl bg-red-950 text-red-300 font-mono font-extrabold text-sm border border-red-800/80 flex items-center gap-1.5">
+                                    <i data-lucide="calendar" class="w-3.5 h-3.5"></i> ABR - DEZ / 2020
+                                </span>
+                                <span class="text-xs font-mono bg-slate-900 text-slate-400 px-2.5 py-1 rounded-lg border border-slate-800">
+                                    Crise Sanitária & Boiada
+                                </span>
+                            </div>
+                            <span class="text-xs font-semibold font-mono text-red-400">"Não Sou Coveiro" & 81 E-mails da Pfizer</span>
+                        </div>
+                        <div class="grid md:grid-cols-12 gap-6 items-start">
+                            <div class="md:col-span-8">
+                                <h3 class="text-xl font-bold text-white mb-2 flex items-center gap-2">
+                                    <i data-lucide="heart-crack" class="w-5 h-5 text-red-400"></i>
+                                    Reunião Ministerial da "Boiada" e o Sabotamento da Compra de Vacinas
+                                </h3>
+                                <p class="text-slate-300 text-sm leading-relaxed mb-4">
+                                    Em 22 de abril, Ricardo Salles declarou que era hora de <em>"ir passando a boiada"</em> na legislação ambiental enquanto a imprensa focava na Covid. Dias depois, com 5 mil mortes, Bolsonaro retrucou: <em>"E daí? Não sou coveiro"</em>. No segundo semestre, o Ministério da Saúde ignorou <strong>81 e-mails e ofertas da Pfizer</strong> para fornecimento prioritário de 70 milhões de doses, ao passo que gastou milhões do erário fabricando cloroquina no laboratório do Exército e ameaçando que vacinados "virariam jacaré".
+                                </p>
+                                <div class="flex flex-wrap gap-2 text-xs font-mono">
+                                    <span class="bg-slate-900 px-2.5 py-1 rounded text-slate-300 border border-slate-800">Vídeo de 22 de Abril</span>
+                                    <span class="bg-slate-900 px-2.5 py-1 rounded text-slate-300 border border-slate-800">Gabinete Paralelo da Saúde</span>
+                                    <span class="bg-red-950/70 text-red-300 px-2.5 py-1 rounded border border-red-800/60">+700.000 Vítimas Fatais</span>
+                                </div>
+                            </div>
+                            <div class="md:col-span-4 bg-slate-900/90 border border-slate-800 p-4 rounded-2xl text-xs space-y-2">
+                                <div class="text-slate-400 font-mono uppercase font-bold flex items-center gap-1.5 text-[11px] text-red-400">
+                                    <i data-lucide="file-text" class="w-3.5 h-3.5"></i> Consequência Factual:
+                                </div>
+                                <p class="text-slate-300 leading-snug">
+                                    Estudos da USP e FGV comprovaram que o atraso deliberado na vacinação e a disseminação de teses de imunidade de rebanho causaram dezenas de milhares de mortes evitáveis no país.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Direction Arrow -->
+                    <div class="flex justify-center my-3">
+                        <div class="flex items-center gap-2 px-3 py-1 rounded-full bg-slate-900 border border-slate-800 text-slate-400 text-xs font-mono">
+                            <i data-lucide="arrow-down" class="w-4 h-4 text-rose-500 animate-bounce"></i>
+                            <span>Colapso de Manaus, CPI da Covid & A Mansão de Flávio</span>
+                            <i data-lucide="arrow-down" class="w-4 h-4 text-rose-500 animate-bounce"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 4. 2021: MANAUS, MANSÃO DE FLÁVIO & CPI -->
+                <div class="timeline-event-card" data-era="2020-2021">
+                    <div class="bg-[#111726] border-2 border-rose-900/60 hover:border-rose-500/80 p-6 sm:p-7 rounded-3xl relative shadow-xl transition-all">
+                        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-4 pb-3 border-b border-slate-800">
+                            <div class="flex items-center gap-3">
+                                <span class="px-3 py-1 rounded-xl bg-rose-950 text-rose-300 font-mono font-extrabold text-sm border border-rose-800/80 flex items-center gap-1.5">
+                                    <i data-lucide="calendar" class="w-3.5 h-3.5"></i> 2021 (ANO 3)
+                                </span>
+                                <span class="text-xs font-mono bg-slate-900 text-slate-400 px-2.5 py-1 rounded-lg border border-slate-800">
+                                    CPI da Covid & Patrimônio BRB
+                                </span>
+                            </div>
+                            <span class="text-xs font-semibold font-mono text-rose-400">Asfixia em Manaus & Mansão de R$ 6 Milhões</span>
+                        </div>
+                        <div class="grid md:grid-cols-12 gap-6 items-start">
+                            <div class="md:col-span-8">
+                                <h3 class="text-xl font-bold text-white mb-2 flex items-center gap-2">
+                                    <i data-lucide="skull" class="w-5 h-5 text-rose-400"></i>
+                                    A Tragédia do Oxigênio no Amazonas e o Escândalo da Mansão de Brasília
+                                </h3>
+                                <p class="text-slate-300 text-sm leading-relaxed mb-4">
+                                    Em janeiro de 2021, pacientes morreram asfixiados em Manaus por falta de cilindros de oxigênio. A gestão militar de Eduardo Pazuello enviou comitivas para pressionar o uso de hidroxicloroquina ao invés de suprir o gás vital. Dois meses depois, o senador <strong>Flávio Bolsonaro comprou uma mansão cinematográfica de R$ 6 milhões em Brasília</strong> com financiamento no BRB cujas parcelas superavam seus rendimentos oficiais. No Senado, a CPI da Covid desnudou o pedido de propina de US$ 1 por dose na compra da vacina Covaxin.
+                                </p>
+                                <div class="flex flex-wrap gap-2 text-xs font-mono">
+                                    <span class="bg-slate-900 px-2.5 py-1 rounded text-slate-300 border border-slate-800">Caso Davati / Covaxin</span>
+                                    <span class="bg-slate-900 px-2.5 py-1 rounded text-slate-300 border border-slate-800">Mansão Dom Bosco (DF)</span>
+                                    <span class="bg-rose-950/70 text-rose-300 px-2.5 py-1 rounded border border-rose-800/60">Indiciamento por 9 Crimes na CPI</span>
+                                </div>
+                            </div>
+                            <div class="md:col-span-4 bg-slate-900/90 border border-slate-800 p-4 rounded-2xl text-xs space-y-2">
+                                <div class="text-slate-400 font-mono uppercase font-bold flex items-center gap-1.5 text-[11px] text-rose-400">
+                                    <i data-lucide="scale" class="w-3.5 h-3.5"></i> Conclusão da CPI:
+                                </div>
+                                <p class="text-slate-300 leading-snug">
+                                    A CPI do Senado indiciou Bolsonaro por crimes contra a humanidade, prevaricação, epidemia com resultado morte e infração de medida sanitária preventiva.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Direction Arrow -->
+                    <div class="flex justify-center my-3">
+                        <div class="flex items-center gap-2 px-3 py-1 rounded-full bg-slate-900 border border-slate-800 text-slate-400 text-xs font-mono">
+                            <i data-lucide="arrow-down" class="w-4 h-4 text-amber-500 animate-bounce"></i>
+                            <span>Pastores do MEC, Ataques às Urnas & Conspiração Golpista</span>
+                            <i data-lucide="arrow-down" class="w-4 h-4 text-amber-500 animate-bounce"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 5. 2022: MEC, 51 IMÓVEIS, ZAMBELLI & MINUTA DO GOLPE -->
+                <div class="timeline-event-card" data-era="2022">
+                    <div class="bg-[#111726] border-2 border-orange-900/60 hover:border-orange-500/80 p-6 sm:p-7 rounded-3xl relative shadow-xl transition-all">
+                        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-4 pb-3 border-b border-slate-800">
+                            <div class="flex items-center gap-3">
+                                <span class="px-3 py-1 rounded-xl bg-orange-950 text-orange-300 font-mono font-extrabold text-sm border border-orange-800/80 flex items-center gap-1.5">
+                                    <i data-lucide="calendar" class="w-3.5 h-3.5"></i> 2022 (ANO ELEITORAL)
+                                </span>
+                                <span class="text-xs font-mono bg-slate-900 text-slate-400 px-2.5 py-1 rounded-lg border border-slate-800">
+                                    Ouro no MEC, PRF & Punhal Verde
+                                </span>
+                            </div>
+                            <span class="text-xs font-semibold font-mono text-orange-400">Escândalos de Corrupção e Conspiração de Ruptura</span>
+                        </div>
+                        <div class="grid md:grid-cols-12 gap-6 items-start">
+                            <div class="md:col-span-8">
+                                <h3 class="text-xl font-bold text-white mb-2 flex items-center gap-2">
+                                    <i data-lucide="bomb" class="w-5 h-5 text-orange-400"></i>
+                                    Barras de Ouro no MEC, 51 Imóveis em Espécie, Atentado e Minuta do Golpe
+                                </h3>
+                                <p class="text-slate-300 text-sm leading-relaxed mb-4">
+                                    O ano de 2022 concentrou graves violações da ordem institucional:
+                                </p>
+                                <ul class="text-slate-300 text-xs sm:text-sm space-y-1.5 list-disc pl-4 mb-4">
+                                    <li><strong>Março:</strong> Prisão do ministro da Educação Milton Ribeiro após áudio confessando liberar verbas do MEC mediante propina em <strong>barras de ouro</strong> a pastores amigos do presidente.</li>
+                                    <li><strong>Julho:</strong> Reunião com embaixadores usando a TV Brasil para atacar urnas eletrônicas (que geraria sua inelegibilidade) e reunião gravada ordenando ministros a <em>"virar a mesa antes da eleição"</em>.</li>
+                                    <li><strong>Agosto:</strong> UOL comprova que o clã Bolsonaro comprou <strong>51 imóveis com dinheiro vivo</strong>.</li>
+                                    <li><strong>Outubro/Novembro:</strong> Carla Zambelli persegue jornalista negro com pistola na mão em SP; PRF de Silvinei Vasques faz bloqueios ilegais no Nordeste para suprimir votos.</li>
+                                    <li><strong>Dezembro:</strong> Terrorista tenta explodir caminhão no Aeroporto de Brasília; inserção de vacinas falsas no ConecteSUS; militares elaboram o plano <strong>"Punhal Verde e Amarelo"</strong> para assassinar Lula, Alckmin e Moraes.</li>
+                                </ul>
+                                <div class="flex flex-wrap gap-2 text-xs font-mono">
+                                    <span class="bg-orange-950/70 text-orange-300 px-2.5 py-1 rounded border border-orange-800/60">Operação Venire</span>
+                                    <span class="bg-orange-950/70 text-orange-300 px-2.5 py-1 rounded border border-orange-800/60">Kids Pretos no Planalto</span>
+                                    <span class="bg-slate-900 px-2.5 py-1 rounded text-slate-300 border border-slate-800">Fuga para Orlando em 30/12</span>
+                                </div>
+                            </div>
+                            <div class="md:col-span-4 bg-slate-900/90 border border-slate-800 p-4 rounded-2xl text-xs space-y-2">
+                                <div class="text-slate-400 font-mono uppercase font-bold flex items-center gap-1.5 text-[11px] text-orange-400">
+                                    <i data-lucide="file-check" class="w-3.5 h-3.5"></i> Prova Crucial da PF:
+                                </div>
+                                <p class="text-slate-300 leading-snug">
+                                    Documentos e impressões feitas dentro do Palácio do Planalto revelaram minutas de decretação de Estado de Sítio e listas de alvos para captura e execução antes da posse de 2023.
+                                </p>
+                                <button onclick="openEvidenceModal('golpe')" class="text-orange-400 hover:text-orange-300 underline font-semibold flex items-center gap-1 pt-1">
+                                    Ver provas da Operação Punhal <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Direction Arrow -->
+                    <div class="flex justify-center my-3">
+                        <div class="flex items-center gap-2 px-3 py-1 rounded-full bg-slate-900 border border-slate-800 text-slate-400 text-xs font-mono">
+                            <i data-lucide="arrow-down" class="w-4 h-4 text-red-500 animate-bounce"></i>
+                            <span>8 de Janeiro, Inelegibilidade Histórica & O Caso das Joias</span>
+                            <i data-lucide="arrow-down" class="w-4 h-4 text-red-500 animate-bounce"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 6. 2023: 8 DE JANEIRO, INELEGIBILIDADE & JOIAS SAUDITAS -->
+                <div class="timeline-event-card" data-era="2023">
+                    <div class="bg-[#111726] border-2 border-red-900/60 hover:border-red-500/80 p-6 sm:p-7 rounded-3xl relative shadow-xl transition-all">
+                        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-4 pb-3 border-b border-slate-800">
+                            <div class="flex items-center gap-3">
+                                <span class="px-3 py-1 rounded-xl bg-red-950 text-red-300 font-mono font-extrabold text-sm border border-red-800/80 flex items-center gap-1.5">
+                                    <i data-lucide="calendar" class="w-3.5 h-3.5"></i> 2023 (RESPOSTA DA LEI)
+                                </span>
+                                <span class="text-xs font-mono bg-slate-900 text-slate-400 px-2.5 py-1 rounded-lg border border-slate-800">
+                                    Terrorismo & Peculato
+                                </span>
+                            </div>
+                            <span class="text-xs font-semibold font-mono text-red-400">Barbárie em Brasília & Inelegibilidade Decretada</span>
+                        </div>
+                        <div class="grid md:grid-cols-12 gap-6 items-start">
+                            <div class="md:col-span-8">
+                                <h3 class="text-xl font-bold text-white mb-2 flex items-center gap-2">
+                                    <i data-lucide="landmark" class="w-5 h-5 text-red-400"></i>
+                                    A Invasão dos Três Poderes, Condenação no TSE e o Contrabando de Joias
+                                </h3>
+                                <p class="text-slate-300 text-sm leading-relaxed mb-4">
+                                    Em 8 de janeiro, milhares de extremistas insuflados por mentiras eleitorais destruíram o Congresso Nacional, o Palácio do Planalto e o STF. A PF apreendeu a <strong>Minuta do Golpe</strong> na casa do ex-ministro Anderson Torres. Em junho de 2023, o Tribunal Superior Eleitoral condenou Jair Bolsonaro a <strong>8 anos de inelegibilidade (até 2030)</strong> por abuso de poder político. Em agosto, a <em>Operação Lucas 12:2</em> revelou que relógios Rolex e joias de diamantes foram desviados nos EUA com o dinheiro vivo sendo entregue ao ex-presidente.
+                                </p>
+                                <div class="flex flex-wrap gap-2 text-xs font-mono">
+                                    <span class="bg-red-950/70 text-red-300 px-2.5 py-1 rounded border border-red-800/60">TSE: Inelegível até 2030</span>
+                                    <span class="bg-slate-900 px-2.5 py-1 rounded text-slate-300 border border-slate-800">+200 Condenados no STF</span>
+                                    <span class="bg-amber-950/70 text-amber-300 px-2.5 py-1 rounded border border-amber-800/60">Recompra de Rolex por Wassef</span>
+                                </div>
+                            </div>
+                            <div class="md:col-span-4 bg-slate-900/90 border border-slate-800 p-4 rounded-2xl text-xs space-y-2">
+                                <div class="text-slate-400 font-mono uppercase font-bold flex items-center gap-1.5 text-[11px] text-amber-400">
+                                    <i data-lucide="gem" class="w-3.5 h-3.5"></i> Prova do Escândalo das Joias:
+                                </div>
+                                <p class="text-slate-300 leading-snug">
+                                    Áudios de Mauro Cid e recibos assinados provaram a entrada ilegal dos itens de luxo e a recompra de emergência em Miami com notas de dólares em espécie para tentar ludibriar o TCU.
+                                </p>
+                                <button onclick="openEvidenceModal('joias')" class="text-amber-400 hover:text-amber-300 underline font-semibold flex items-center gap-1 pt-1">
+                                    Ver recibos das joias <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Direction Arrow -->
+                    <div class="flex justify-center my-3">
+                        <div class="flex items-center gap-2 px-3 py-1 rounded-full bg-slate-900 border border-slate-800 text-slate-400 text-xs font-mono">
+                            <i data-lucide="arrow-down" class="w-4 h-4 text-red-500 animate-bounce"></i>
+                            <span>Operação Tempus Veritatis, Indiciamentos & Caso Banco Master</span>
+                            <i data-lucide="arrow-down" class="w-4 h-4 text-red-500 animate-bounce"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 7. 2024 A 2026: INDICIAMENTOS FINAIS DA PF, CASO MASTER & DESFECHO JUDICIAL -->
+                <div class="timeline-event-card" data-era="2024-2026">
+                    <div class="bg-[#111726] border-2 border-red-600/70 hover:border-red-500 p-6 sm:p-8 rounded-3xl relative shadow-2xl transition-all">
+                        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-4 pb-3 border-b border-slate-800">
+                            <div class="flex items-center gap-3">
+                                <span class="px-3 py-1 rounded-xl bg-red-600 text-white font-mono font-extrabold text-sm border border-red-500 flex items-center gap-1.5">
+                                    <i data-lucide="calendar" class="w-3.5 h-3.5"></i> 2024 - 2026 (HORA DA JUSTIÇA)
+                                </span>
+                                <span class="text-xs font-mono bg-red-950 text-red-300 px-2.5 py-1 rounded-lg border border-red-800">
+                                    PF & STF: Risco Iminente de Prisão
+                                </span>
+                            </div>
+                            <span class="text-xs font-semibold font-mono text-red-400">Conclusão dos Inquéritos Penais</span>
+                        </div>
+                        <div class="grid md:grid-cols-12 gap-6 items-start">
+                            <div class="md:col-span-8">
+                                <h3 class="text-2xl font-bold text-white mb-2 flex items-center gap-2">
+                                    <i data-lucide="gavel" class="w-6 h-6 text-red-400"></i>
+                                    Quatro Indiciamentos da PF, Operação Contragolpe e as Conexões do Caso Banco Master
+                                </h3>
+                                <p class="text-slate-300 text-sm leading-relaxed mb-4">
+                                    A Polícia Federal concluiu seus inquéritos mais contundentes da história republicana, formalmente indiciando Jair Bolsonaro e generais de quatro estrelas pelos crimes de <strong>golpe de Estado, abolição violenta da democracia e organização criminosa</strong> (relatório de mais de 800 páginas), além dos indiciamentos nas fraudes de vacina e desvio de joias. Em paralelo, as investigações do mercado financeiro e no Congresso jogam luz sobre a teia de relações políticas entre o senador <strong>Flávio Bolsonaro e operadores do polêmico Banco Master</strong> no segmento de precatórios.
+                                </p>
+                                <div class="flex flex-wrap gap-2 text-xs font-mono">
+                                    <span class="bg-red-900/80 text-red-200 px-3 py-1 rounded-lg border border-red-700/60 font-bold">Pena Prevista: Até 28 Anos</span>
+                                    <span class="bg-slate-900 px-2.5 py-1 rounded text-slate-300 border border-slate-800">Passaporte Retido</span>
+                                    <span class="bg-amber-950/80 text-amber-300 px-2.5 py-1 rounded border border-amber-800/60">Articulações Banco Master & Flávio</span>
+                                </div>
+                            </div>
+                            <div class="md:col-span-4 bg-slate-900/90 border border-red-900/50 p-5 rounded-2xl text-xs space-y-3">
+                                <div class="text-red-400 font-mono uppercase font-bold flex items-center gap-1.5 text-xs">
+                                    <i data-lucide="alert-octagon" class="w-4 h-4 text-red-500"></i> O Próximo Marco:
+                                </div>
+                                <p class="text-slate-300 leading-snug">
+                                    Com o avanço dos processos penais no Supremo Tribunal Federal e as eleições gerais marcadas para <strong>04 de outubro de 2026</strong>, o Brasil chega ao julgamento final sobre o legado da extrema direita e a preservação do Estado Democrático de Direito.
+                                </p>
+                                <a href="#eleicoes-2026" class="inline-flex items-center gap-1.5 text-red-400 hover:text-red-300 font-bold pt-1">
+                                    Ver calendário das Eleições 2026 <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- SECTION 3: MURAL DAS FALAS ABSURDAS E ALIADOS -->
+        <section id="mural-falas" class="scroll-mt-24 reveal dossier-item" data-category="falas">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 pb-4 border-b border-orange-900/50 gap-4">
+                <div>
+                    <div class="inline-flex items-center gap-1.5 text-orange-400 text-xs font-mono font-bold uppercase tracking-wider mb-2">
+                        <i data-lucide="mic-off" class="w-4 h-4"></i> Arquivo Sonoro & Declarações
+                    </div>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-white font-display">
+                        Mural da Vergonha: As Falas Mais Absurdas dos Aliados e do Clã
+                    </h2>
+                </div>
+                <div>
+                    <span class="text-xs font-mono bg-orange-950 text-orange-300 px-3 py-1 rounded-full border border-orange-800/80">
+                        Declarações Públicas Gravadas
+                    </span>
+                </div>
+            </div>
+
+            <!-- Quotes Filter Tabs -->
+            <div class="flex flex-wrap gap-2 mb-6" id="quotes-filter-container">
+                <button onclick="filterQuotes('all')" class="quote-filter-btn active text-xs font-semibold px-3 py-1.5 rounded-lg bg-orange-600 text-white">Todos</button>
+                <button onclick="filterQuotes('jair')" class="quote-filter-btn text-xs font-semibold px-3 py-1.5 rounded-lg bg-slate-800 text-slate-300 hover:bg-slate-700">Jair Bolsonaro</button>
+                <button onclick="filterQuotes('eduardo')" class="quote-filter-btn text-xs font-semibold px-3 py-1.5 rounded-lg bg-slate-800 text-slate-300 hover:bg-slate-700">Eduardo Bolsonaro</button>
+                <button onclick="filterQuotes('salles')" class="quote-filter-btn text-xs font-semibold px-3 py-1.5 rounded-lg bg-slate-800 text-slate-300 hover:bg-slate-700">Ricardo Salles</button>
+                <button onclick="filterQuotes('damares')" class="quote-filter-btn text-xs font-semibold px-3 py-1.5 rounded-lg bg-slate-800 text-slate-300 hover:bg-slate-700">Damares Alves</button>
+                <button onclick="filterQuotes('zambelli')" class="quote-filter-btn text-xs font-semibold px-3 py-1.5 rounded-lg bg-slate-800 text-slate-300 hover:bg-slate-700">Carla Zambelli & Outros</button>
+            </div>
+
+            <!-- Quotes Grid -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5" id="quotes-grid">
+                
+                <!-- Quote 1: Bolsonaro Coveiro -->
+                <div class="quote-card bg-[#111726] border border-slate-800 p-6 rounded-2xl flex flex-col justify-between hover:border-red-500/50 transition-all" data-author="jair">
+                    <div>
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="text-xs font-bold text-red-400 font-mono">JAIR BOLSONARO</span>
+                            <span class="text-[10px] text-slate-500 font-mono">Abril / 2020</span>
+                        </div>
+                        <div class="text-slate-400 mb-2"><i data-lucide="quote" class="w-6 h-6 text-red-500/40"></i></div>
+                        <p class="text-base font-semibold text-white mb-3 italic">
+                            "Não sou coveiro, tá? Quer que eu faça o quê? Eu sou Messias, mas não faço milagre."
+                        </p>
+                        <p class="text-xs text-slate-400 leading-relaxed">
+                            Resposta dada a jornalistas na porta do Palácio da Alvorada quando o Brasil ultrapassou a marca de 5 mil mortos por Covid-19 em ritmo acelerado de contágio.
+                        </p>
+                    </div>
+                    <div class="pt-4 mt-4 border-t border-slate-800/80 flex items-center justify-between text-[11px] text-slate-500 font-mono">
+                        <span>Tema: Pandemia</span>
+                        <span class="text-red-400 font-semibold">Deboche</span>
+                    </div>
+                </div>
+
+                <!-- Quote 2: Bolsonaro Jacaré -->
+                <div class="quote-card bg-[#111726] border border-slate-800 p-6 rounded-2xl flex flex-col justify-between hover:border-red-500/50 transition-all" data-author="jair">
+                    <div>
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="text-xs font-bold text-red-400 font-mono">JAIR BOLSONARO</span>
+                            <span class="text-[10px] text-slate-500 font-mono">Dezembro / 2020</span>
+                        </div>
+                        <div class="text-slate-400 mb-2"><i data-lucide="quote" class="w-6 h-6 text-red-500/40"></i></div>
+                        <p class="text-base font-semibold text-white mb-3 italic">
+                            "Se você virar um jacaré, é problema seu. Se você virar super-homem ou nascer barba em mulher, não tenho nada a ver com isso."
+                        </p>
+                        <p class="text-xs text-slate-400 leading-relaxed">
+                            Discurso atacando as cláusulas de responsabilidade da vacina da Pfizer para justificar a recusa na compra de milhões de doses no auge da pandemia.
+                        </p>
+                    </div>
+                    <div class="pt-4 mt-4 border-t border-slate-800/80 flex items-center justify-between text-[11px] text-slate-500 font-mono">
+                        <span>Tema: Vacinas</span>
+                        <span class="text-red-400 font-semibold">Negacionismo</span>
+                    </div>
+                </div>
+
+                <!-- Quote 3: Eduardo Bolsonaro Cabo e Soldado -->
+                <div class="quote-card bg-[#111726] border border-slate-800 p-6 rounded-2xl flex flex-col justify-between hover:border-orange-500/50 transition-all" data-author="eduardo">
+                    <div>
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="text-xs font-bold text-orange-400 font-mono">EDUARDO BOLSONARO</span>
+                            <span class="text-[10px] text-slate-500 font-mono">Julho / 2018</span>
+                        </div>
+                        <div class="text-slate-400 mb-2"><i data-lucide="quote" class="w-6 h-6 text-orange-500/40"></i></div>
+                        <p class="text-base font-semibold text-white mb-3 italic">
+                            "Se quiser fechar o STF, você não manda nem um jipe. Manda um soldado e um cabo."
+                        </p>
+                        <p class="text-xs text-slate-400 leading-relaxed">
+                            Ameaça explícita de fechamento do Supremo Tribunal Federal pelas Forças Armadas durante palestra antes da eleição presidencial.
+                        </p>
+                    </div>
+                    <div class="pt-4 mt-4 border-t border-slate-800/80 flex items-center justify-between text-[11px] text-slate-500 font-mono">
+                        <span>Tema: Instituições</span>
+                        <span class="text-orange-400 font-semibold">Golpismo</span>
+                    </div>
+                </div>
+
+                <!-- Quote 4: Ricardo Salles Passar a Boiada -->
+                <div class="quote-card bg-[#111726] border border-slate-800 p-6 rounded-2xl flex flex-col justify-between hover:border-emerald-500/50 transition-all" data-author="salles">
+                    <div>
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="text-xs font-bold text-emerald-400 font-mono">RICARDO SALLES</span>
+                            <span class="text-[10px] text-slate-500 font-mono">Abril / 2020</span>
+                        </div>
+                        <div class="text-slate-400 mb-2"><i data-lucide="quote" class="w-6 h-6 text-emerald-500/40"></i></div>
+                        <p class="text-base font-semibold text-white mb-3 italic">
+                            "Ir passando a boiada e mudando todo o regramento enquanto a imprensa está dando cobertura exclusiva à Covid."
+                        </p>
+                        <p class="text-xs text-slate-400 leading-relaxed">
+                            Reunião ministerial gravada em vídeo onde o então ministro do Meio Ambiente propôs desregulamentar normas ambientais aproveitando a distração da sociedade com mortes na pandemia.
+                        </p>
+                    </div>
+                    <div class="pt-4 mt-4 border-t border-slate-800/80 flex items-center justify-between text-[11px] text-slate-500 font-mono">
+                        <span>Tema: Meio Ambiente</span>
+                        <span class="text-emerald-400 font-semibold">Desmonte</span>
+                    </div>
+                </div>
+
+                <!-- Quote 5: Damares Alves Menino e Menina -->
+                <div class="quote-card bg-[#111726] border border-slate-800 p-6 rounded-2xl flex flex-col justify-between hover:border-purple-500/50 transition-all" data-author="damares">
+                    <div>
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="text-xs font-bold text-purple-400 font-mono">DAMARES ALVES</span>
+                            <span class="text-[10px] text-slate-500 font-mono">Janeiro / 2019</span>
+                        </div>
+                        <div class="text-slate-400 mb-2"><i data-lucide="quote" class="w-6 h-6 text-purple-500/40"></i></div>
+                        <p class="text-base font-semibold text-white mb-3 italic">
+                            "Atenção, atenção! É uma nova era no Brasil: menino veste azul e menina veste rosa!"
+                        </p>
+                        <p class="text-xs text-slate-400 leading-relaxed">
+                            Discurso em vídeo após tomar posse como ministra da Mulher, da Família e dos Direitos Humanos, simbolizando o fundamentalismo e a perseguição à diversidade.
+                        </p>
+                    </div>
+                    <div class="pt-4 mt-4 border-t border-slate-800/80 flex items-center justify-between text-[11px] text-slate-500 font-mono">
+                        <span>Tema: Direitos Humanos</span>
+                        <span class="text-purple-400 font-semibold">Pânico Moral</span>
+                    </div>
+                </div>
+
+                <!-- Quote 6: Carla Zambelli e Walter Delgatti -->
+                <div class="quote-card bg-[#111726] border border-slate-800 p-6 rounded-2xl flex flex-col justify-between hover:border-rose-500/50 transition-all" data-author="zambelli">
+                    <div>
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="text-xs font-bold text-rose-400 font-mono">CARLA ZAMBELLI & ALLIADOS</span>
+                            <span class="text-[10px] text-slate-500 font-mono">2022 - 2023</span>
+                        </div>
+                        <div class="text-slate-400 mb-2"><i data-lucide="quote" class="w-6 h-6 text-rose-500/40"></i></div>
+                        <p class="text-base font-semibold text-white mb-3 italic">
+                            Perseguição com arma em punho pelas ruas dos Jardins e contratação de hacker contra a Justiça.
+                        </p>
+                        <p class="text-xs text-slate-400 leading-relaxed">
+                            Zambelli perseguiu armada um jornalista negro na véspera da eleição de 2022 e foi indiciada pela PF por pagar o hacker Walter Delgatti para invadir os sistemas do CNJ e fraudar um mandado de prisão falso contra Alexandre de Moraes.
+                        </p>
+                    </div>
+                    <div class="pt-4 mt-4 border-t border-slate-800/80 flex items-center justify-between text-[11px] text-slate-500 font-mono">
+                        <span>Tema: Violação da Lei</span>
+                        <span class="text-rose-400 font-semibold">Crimes Eleitorais</span>
+                    </div>
+                </div>
+
+                <!-- Quote 7: Pazuello e a Submissão -->
+                <div class="quote-card bg-[#111726] border border-slate-800 p-6 rounded-2xl flex flex-col justify-between hover:border-red-500/50 transition-all" data-author="jair">
+                    <div>
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="text-xs font-bold text-red-400 font-mono">GEN. EDUARDO PAZUELLO</span>
+                            <span class="text-[10px] text-slate-500 font-mono">Outubro / 2020</span>
+                        </div>
+                        <div class="text-slate-400 mb-2"><i data-lucide="quote" class="w-6 h-6 text-red-500/40"></i></div>
+                        <p class="text-base font-semibold text-white mb-3 italic">
+                            "É simples assim: um manda e o outro obedece. Mas a gente tem um carinho, né?"
+                        </p>
+                        <p class="text-xs text-slate-400 leading-relaxed">
+                            O então ministro da Saúde militar submetendo-se a Bolsonaro após o presidente mandar cancelar a compra da vacina CoronaVac por pura rivalidade política com o governo de SP.
+                        </p>
+                    </div>
+                    <div class="pt-4 mt-4 border-t border-slate-800/80 flex items-center justify-between text-[11px] text-slate-500 font-mono">
+                        <span>Tema: Saúde Pública</span>
+                        <span class="text-red-400 font-semibold">Subserviência</span>
+                    </div>
+                </div>
+
+                <!-- Quote 8: Carlos Bolsonaro e a Democracia -->
+                <div class="quote-card bg-[#111726] border border-slate-800 p-6 rounded-2xl flex flex-col justify-between hover:border-orange-500/50 transition-all" data-author="eduardo">
+                    <div>
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="text-xs font-bold text-orange-400 font-mono">CARLOS BOLSONARO</span>
+                            <span class="text-[10px] text-slate-500 font-mono">Setembro / 2019</span>
+                        </div>
+                        <div class="text-slate-400 mb-2"><i data-lucide="quote" class="w-6 h-6 text-orange-500/40"></i></div>
+                        <p class="text-base font-semibold text-white mb-3 italic">
+                            "Por vias democráticas a transformação que o Brasil quer não acontecerá na velocidade que almejamos."
+                        </p>
+                        <p class="text-xs text-slate-400 leading-relaxed">
+                            Publicação explícita em redes sociais do vereador e operador do 'Gabinete do Ódio' desacreditando as instituições representativas da democracia brasileira.
+                        </p>
+                    </div>
+                    <div class="pt-4 mt-4 border-t border-slate-800/80 flex items-center justify-between text-[11px] text-slate-500 font-mono">
+                        <span>Tema: Democracia</span>
+                        <span class="text-orange-400 font-semibold">Autoritarismo</span>
+                    </div>
+                </div>
+
+                <!-- Quote 9: Damares e a Falsa Denúncia do Marajó -->
+                <div class="quote-card bg-[#111726] border border-slate-800 p-6 rounded-2xl flex flex-col justify-between hover:border-purple-500/50 transition-all" data-author="damares">
+                    <div>
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="text-xs font-bold text-purple-400 font-mono">DAMARES ALVES</span>
+                            <span class="text-[10px] text-slate-500 font-mono">Outubro / 2022</span>
+                        </div>
+                        <div class="text-slate-400 mb-2"><i data-lucide="quote" class="w-6 h-6 text-purple-500/40"></i></div>
+                        <p class="text-base font-semibold text-white mb-3 italic">
+                            Histórias fictícias e estarrecedoras sobre tráfico e mutilação de bebês no Marajó.
+                        </p>
+                        <p class="text-xs text-slate-400 leading-relaxed">
+                            Damares discursou em templo religioso inventando relatos grotescos de abusos para gerar comoção eleitoral. Questionada pelo MPF, confessou não possuir qualquer prova ou denúncia formal registrada.
+                        </p>
+                    </div>
+                    <div class="pt-4 mt-4 border-t border-slate-800/80 flex items-center justify-between text-[11px] text-slate-500 font-mono">
+                        <span>Tema: Manipulação Religiosa</span>
+                        <span class="text-purple-400 font-semibold">Fake News</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 4: O DESASTRE SETORIAL (PANDEMIA, YANOMAMI, 8 DE JANEIRO, CORRUPÇÃO) -->
+        <section id="setores-desastre" class="scroll-mt-24 reveal dossier-item" data-category="pandemia">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 pb-4 border-b border-rose-900/50 gap-4">
+                <div>
+                    <div class="inline-flex items-center gap-1.5 text-rose-400 text-xs font-mono font-bold uppercase tracking-wider mb-2">
+                        <i data-lucide="flame" class="w-4 h-4"></i> O Impacto Real na Vida da População
+                    </div>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-white font-display">
+                        O Mapa do Desastre: Quatro Anos de Destruição do Brasil
+                    </h2>
+                </div>
+                <div>
+                    <span class="text-xs font-mono bg-rose-950 text-rose-300 px-3 py-1 rounded-full border border-rose-800/80">
+                        Relatórios CPI & Auditorias
+                    </span>
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-6">
+                
+                <!-- 1. Pandemia e Manaus -->
+                <div class="bg-[#111726] border border-slate-800 p-6 sm:p-7 rounded-2xl">
+                    <div class="flex items-center gap-3 text-red-400 font-bold mb-3">
+                        <div class="p-2 rounded-lg bg-red-950 border border-red-800"><i data-lucide="cross" class="w-5 h-5"></i></div>
+                        <h4 class="text-xl text-white font-bold">Colapso de Manaus & 81 E-mails da Pfizer Ignorados</h4>
+                    </div>
+                    <p class="text-slate-300 text-sm leading-relaxed mb-4">
+                        O governo federal atrasou propositalmente a compra de imunizantes enquanto promoveu medicamentos comprovadamente ineficazes (cloroquina, ivermectina) produzidos pelo Exército. Em Manaus, pacientes morreram asfixiados em leitos de hospital por falta de oxigênio mesmo após avisos prévios do governo estadual ao Ministério da Saúde. A CPI da Covid pediu o indiciamento de Bolsonaro por 9 crimes, incluindo <strong>crime contra a humanidade</strong>.
+                    </p>
+                    <ul class="text-xs text-slate-400 space-y-1.5 font-mono">
+                        <li>• Pedido de propina de US$ 1 por dose (caso Davati / Covaxin)</li>
+                        <li>• Testes clandestinos com pacientes na Prevent Senior</li>
+                        <li>• Mais de 700 mil mortes registradas no país</li>
+                    </ul>
+                </div>
+
+                <!-- 2. Tragédia Yanomami e Meio Ambiente -->
+                <div class="bg-[#111726] border border-slate-800 p-6 sm:p-7 rounded-2xl">
+                    <div class="flex items-center gap-3 text-emerald-400 font-bold mb-3">
+                        <div class="p-2 rounded-lg bg-emerald-950 border border-emerald-800"><i data-lucide="trees" class="w-5 h-5"></i></div>
+                        <h4 class="text-xl text-white font-bold">A Crise Humanitária Yanomami & Desmatamento Recorde</h4>
+                    </div>
+                    <p class="text-slate-300 text-sm leading-relaxed mb-4">
+                        O desmonte do IBAMA, ICMBio e da FUNAI abriu caminho para mais de 20 mil garimpeiros ilegais invadirem a Terra Indígena Yanomami em Roraima. Crianças e idosos morreram de desnutrição severa, malária e contaminação por mercúrio nos rios, enquanto voos humanitários e assistência médica foram suspensos ou negligenciados pelas autoridades federais.
+                    </p>
+                    <ul class="text-xs text-slate-400 space-y-1.5 font-mono">
+                        <li>• Queima de registros e corte de multas ambientais</li>
+                        <li>• Recordes de fogo no Pantanal e na Amazônia</li>
+                        <li>• Investigação do ministro Ricardo Salles por tráfico de madeira</li>
+                    </ul>
+                </div>
+
+                <!-- 3. Terrorismo e o 8 de Janeiro -->
+                <div class="bg-[#111726] border border-slate-800 p-6 sm:p-7 rounded-2xl">
+                    <div class="flex items-center gap-3 text-orange-400 font-bold mb-3">
+                        <div class="p-2 rounded-lg bg-orange-950 border border-orange-800"><i data-lucide="bomb" class="w-5 h-5"></i></div>
+                        <h4 class="text-xl text-white font-bold">Terrorismo no Aeroporto e a Barbárie do 8 de Janeiro</h4>
+                    </div>
+                    <p class="text-slate-300 text-sm leading-relaxed mb-4">
+                        Após meses de acampamentos em quartéis incentivados pelo discurso de fraude eleitoral, bolsonaristas tentaram explodir um caminhão de combustível perto do Aeroporto de Brasília na véspera do Natal de 2022. Em 8 de janeiro de 2023, milhares de extremistas invadiram e depredaram as sedes dos Três Poderes, destruindo obras de arte históricas, rasgando a Constituição e clamando por intervenção militar.
+                    </p>
+                    <ul class="text-xs text-slate-400 space-y-1.5 font-mono">
+                        <li>• Mais de 200 condenados pelo STF a penas de até 17 anos</li>
+                        <li>• Prisão do ex-secretário Anderson Torres com a Minuta do Golpe</li>
+                        <li>• Financiadores de ônibus e empresários identificados</li>
+                    </ul>
+                </div>
+
+                <!-- 4. Escândalos de Corrupção dos Pastores do MEC -->
+                <div class="bg-[#111726] border border-slate-800 p-6 sm:p-7 rounded-2xl">
+                    <div class="flex items-center gap-3 text-amber-400 font-bold mb-3">
+                        <div class="p-2 rounded-lg bg-amber-950 border border-amber-800"><i data-lucide="coins" class="w-5 h-5"></i></div>
+                        <h4 class="text-xl text-white font-bold">Pastores do MEC, Barras de Ouro e Tratores Superfaturados</h4>
+                    </div>
+                    <p class="text-slate-300 text-sm leading-relaxed mb-4">
+                        Apesar do discurso de "combate à corrupção", o governo operou o "Orçamento Secreto" bilionário sem transparência. No Ministério da Educação, pastores sem cargo oficial controlavam a liberação de verbas do FNDE em troca de <strong>propina em dinheiro e em barras de ouro</strong>, segundo confissões de prefeitos. O então ministro Milton Ribeiro admitiu em áudio que atendia a pedidos de Bolsonaro.
+                    </p>
+                    <ul class="text-xs text-slate-400 space-y-1.5 font-mono">
+                        <li>• Ministro da Educação preso pela Polícia Federal</li>
+                        <li>• "Tratoraço": compras de equipamentos com sobrepreço milionário</li>
+                        <li>• Cortes drásticos nas bolsas do CNPq, CAPES e merenda escolar</li>
+                    </ul>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- SECTION 5: QUIZ DA MEMÓRIA DEMOCRÁTICA -->
+        <section id="quiz-memoria" class="scroll-mt-24 reveal">
+            <div class="bg-gradient-to-br from-[#121a2d] to-[#0d1320] border-2 border-indigo-500/40 p-6 sm:p-10 rounded-3xl relative overflow-hidden shadow-2xl">
+                <div class="max-w-3xl mx-auto text-center mb-8">
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-500/20 text-indigo-300 border border-indigo-500/30 text-xs font-mono font-bold uppercase mb-4">
+                        <i data-lucide="brain" class="w-4 h-4"></i> Teste Seus Conhecimentos
+                    </div>
+                    <h3 class="text-2xl sm:text-3xl font-extrabold text-white font-display mb-3">
+                        Quiz da Memória: Você Lembra Quem Fez ou Disse Isso?
+                    </h3>
+                    <p class="text-slate-300 text-sm leading-relaxed">
+                        Desafie seus amigos e veja se você ainda se lembra dos fatos reais que marcaram o período do extremismo no Brasil.
+                    </p>
+                </div>
+
+                <!-- Quiz Container -->
+                <div id="quiz-card" class="max-w-2xl mx-auto bg-black/40 border border-slate-800 p-6 rounded-2xl">
+                    <div class="flex items-center justify-between text-xs font-mono text-slate-400 mb-4 pb-2 border-b border-slate-800">
+                        <span id="quiz-step">Pergunta 1 de 5</span>
+                        <span id="quiz-score" class="text-indigo-400 font-bold">Acertos: 0</span>
+                    </div>
+
+                    <div id="quiz-question" class="text-lg font-bold text-white mb-6">
+                        Carregando pergunta...
+                    </div>
+
+                    <div id="quiz-options" class="space-y-3">
+                        <!-- Options generated by JS -->
+                    </div>
+
+                    <div id="quiz-feedback" class="mt-6 p-4 rounded-xl text-sm hidden"></div>
+
+                    <div class="mt-6 flex justify-end">
+                        <button id="quiz-next-btn" onclick="nextQuestion()" class="hidden px-5 py-2.5 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white text-xs font-bold font-mono transition-all">
+                            Próxima Pergunta →
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 6: ELEIÇÕES 2026 E GUIA DO ELEITOR -->
+        <section id="eleicoes-2026" class="scroll-mt-24 reveal">
+            <div class="bg-gradient-to-r from-red-950/90 via-slate-900 to-slate-950 border border-red-800/60 p-8 sm:p-12 rounded-3xl">
+                <div class="grid lg:grid-cols-2 gap-10 items-center">
+                    <div>
+                        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-red-600/20 text-red-300 border border-red-500/30 text-xs font-mono font-bold uppercase mb-4">
+                            <i data-lucide="vote" class="w-4 h-4 text-red-400"></i> Calendário Oficial das Eleições 2026
+                        </div>
+                        <h2 class="text-3xl sm:text-4xl font-extrabold text-white font-display mb-4">
+                            O Brasil Decide Seu Rumo nas Urnas
+                        </h2>
+                        <p class="text-slate-300 text-sm sm:text-base leading-relaxed mb-6">
+                            A democracia se defende com participação ativa e voto consciente. Garanta que seu título de eleitor esteja regularizado e não deixe o extremismo voltar ao poder.
+                        </p>
+
+                        <div class="space-y-4">
+                            <div class="flex items-start gap-4 p-4 rounded-2xl bg-white/5 border border-white/10">
+                                <div class="p-2.5 rounded-xl bg-red-500/20 text-red-400 font-bold font-mono text-sm">01</div>
+                                <div>
+                                    <h4 class="font-bold text-white text-sm">1º Turno: 04 de Outubro de 2026</h4>
+                                    <p class="text-xs text-slate-400">Eleição para Presidente, Governadores, Senadores, Deputados Federais e Estaduais.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-4 p-4 rounded-2xl bg-white/5 border border-white/10">
+                                <div class="p-2.5 rounded-xl bg-amber-500/20 text-amber-400 font-bold font-mono text-sm">02</div>
+                                <div>
+                                    <h4 class="font-bold text-white text-sm">2º Turno: 25 de Outubro de 2026</h4>
+                                    <p class="text-xs text-slate-400">Votação definitiva nos estados e na Presidência onde nenhum candidato atingiu 50% + 1 voto.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-4 p-4 rounded-2xl bg-white/5 border border-white/10">
+                                <div class="p-2.5 rounded-xl bg-indigo-500/20 text-indigo-400 font-bold font-mono text-sm">03</div>
+                                <div>
+                                    <h4 class="font-bold text-white text-sm">Prazo de Regularização do Título: Maio de 2026</h4>
+                                    <p class="text-xs text-slate-400">Data limite para transferência de domicílio, biometria e emissão do primeiro título.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Quick Official Links CTA -->
+                    <div class="bg-black/60 border border-slate-800 p-6 sm:p-8 rounded-3xl text-center flex flex-col justify-center">
+                        <i data-lucide="shield-check" class="w-12 h-12 text-emerald-400 mx-auto mb-4"></i>
+                        <h4 class="text-xl font-bold text-white mb-2">Consulte sua Situação Eleitoral</h4>
+                        <p class="text-xs text-slate-400 mb-6 max-w-sm mx-auto">
+                            Verifique se seu título está apto e baixe o aplicativo oficial e-Título no seu smartphone.
+                        </p>
+                        <div class="flex flex-col gap-3">
+                            <a href="https://www.tse.jus.br/servicos-eleitorais/autoatendimento-eleitoral" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl bg-red-600 hover:bg-red-500 text-white font-bold text-sm transition-all shadow-lg shadow-red-950">
+                                <i data-lucide="external-link" class="w-4 h-4"></i> Autoatendimento do Eleitor (TSE)
+                            </a>
+                            <a href="https://www.justicaeleitoral.jus.br/fato-ou-boato/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl bg-slate-800 hover:bg-slate-700 border border-slate-700 text-slate-200 font-semibold text-sm transition-all">
+                                <i data-lucide="check-check" class="w-4 h-4 text-emerald-400"></i> Portal Fato ou Boato (Checagem)
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-950 border-t border-slate-800 py-12 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
+            <div class="flex items-center gap-3">
+                <div class="w-8 h-8 rounded-lg bg-red-600 flex items-center justify-center text-white">
+                    <i data-lucide="scale" class="w-4 h-4"></i>
+                </div>
+                <div>
+                    <div class="font-bold text-sm text-white">DOSSIÊ DO EXTREMISMO BRASIL</div>
+                    <div class="text-xs text-slate-500">Memorial cívico e arquivo documental para a cidadania</div>
+                </div>
+            </div>
+            <p class="text-xs text-slate-500 max-w-md">
+                Todas as informações citadas são baseadas em inquéritos públicos da Polícia Federal, denúncias do Ministério Público, julgamentos do STF/TSE e apurações da imprensa profissional brasileira.
+            </p>
+            <div class="flex items-center gap-3">
+                <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="p-2.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-400 hover:text-white border border-slate-800 transition-colors">
+                    <i data-lucide="arrow-up" class="w-4 h-4"></i>
+                </button>
+            </div>
+        </div>
+    </footer>
+
+    <!-- MODAL DE EVIDÊNCIAS & PROVAS DA PF -->
+    <div id="evidence-modal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-md hidden items-center justify-center p-4">
+        <div class="bg-[#111726] border border-slate-800 w-full max-w-2xl rounded-3xl p-6 sm:p-8 shadow-2xl relative max-h-[90vh] overflow-y-auto">
+            <button onclick="closeEvidenceModal()" class="absolute top-6 right-6 p-2 rounded-xl bg-slate-900 text-slate-400 hover:text-white border border-slate-800">
+                <i data-lucide="x" class="w-5 h-5"></i>
+            </button>
+            <div id="evidence-modal-content">
+                <!-- Injected via JS -->
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL DE COMPARTILHAMENTO -->
+    <div id="share-modal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-md hidden items-center justify-center p-4">
+        <div class="bg-[#111726] border border-slate-800 w-full max-w-md rounded-3xl p-6 sm:p-8 shadow-2xl relative text-center">
+            <button onclick="closeShareModal()" class="absolute top-5 right-5 p-2 rounded-xl bg-slate-900 text-slate-400 hover:text-white border border-slate-800">
+                <i data-lucide="x" class="w-4 h-4"></i>
+            </button>
+            <div class="w-12 h-12 rounded-2xl bg-red-600/20 text-red-400 flex items-center justify-center mx-auto mb-4 border border-red-500/30">
+                <i data-lucide="share-2" class="w-6 h-6"></i>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-2">Compartilhe a Verdade</h3>
+            <p class="text-xs text-slate-400 mb-6">
+                Envie esse dossiê para amigos, familiares e grupos do WhatsApp para combater o esquecimento e as fake news.
+            </p>
+            <div class="space-y-3">
+                <a id="share-whatsapp" href="#" target="_blank" class="flex items-center justify-center gap-2 w-full py-3 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs transition-colors">
+                    <i data-lucide="message-circle" class="w-4 h-4"></i> Enviar no WhatsApp
+                </a>
+                <a id="share-telegram" href="#" target="_blank" class="flex items-center justify-center gap-2 w-full py-3 rounded-xl bg-sky-600 hover:bg-sky-500 text-white font-bold text-xs transition-colors">
+                    <i data-lucide="send" class="w-4 h-4"></i> Enviar no Telegram
+                </a>
+                <a id="share-twitter" href="#" target="_blank" class="flex items-center justify-center gap-2 w-full py-3 rounded-xl bg-slate-800 hover:bg-slate-700 text-white font-bold text-xs border border-slate-700 transition-colors">
+                    <i data-lucide="twitter" class="w-4 h-4"></i> Postar no X (Twitter)
+                </a>
+                <button onclick="copyPageLink()" id="copy-btn" class="flex items-center justify-center gap-2 w-full py-3 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-300 font-semibold text-xs border border-slate-800 transition-colors">
+                    <i data-lucide="copy" class="w-4 h-4"></i> Copiar Link
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- JAVASCRIPT APPLICATION LOGIC -->
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // COUNTDOWN SCRIPT
+        const electionDate = new Date('2026-10-04T08:00:00').getTime();
+
+        function updateCountdown() {
+            const now = new Date().getTime();
+            const diff = electionDate - now;
+
+            if (diff <= 0) {
+                document.getElementById('cd-days').innerText = "0";
+                document.getElementById('cd-hours').innerText = "0";
+                document.getElementById('cd-mins').innerText = "0";
+                document.getElementById('cd-secs').innerText = "0";
+                return;
+            }
+
+            const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+            document.getElementById('cd-days').innerText = days;
+            document.getElementById('cd-hours').innerText = hours;
+            document.getElementById('cd-mins').innerText = minutes;
+            document.getElementById('cd-secs').innerText = seconds;
+        }
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
+
+        // REVEAL ON SCROLL
+        function checkReveal() {
+            const reveals = document.querySelectorAll('.reveal');
+            for (let i = 0; i < reveals.length; i++) {
+                const windowHeight = window.innerHeight;
+                const elementTop = reveals[i].getBoundingClientRect().top;
+                const elementVisible = 100;
+                if (elementTop < windowHeight - elementVisible) {
+                    reveals[i].classList.add('active');
+                }
+            }
+        }
+        window.addEventListener('scroll', checkReveal);
+        checkReveal();
+
+        // SEARCH & CATEGORY FILTER
+        let activeCategory = 'all';
+
+        function setCategoryFilter(cat) {
+            activeCategory = cat;
+            document.querySelectorAll('.category-btn').forEach(btn => {
+                btn.classList.remove('active', 'bg-red-600', 'text-white');
+                btn.classList.add('bg-slate-800', 'text-slate-300');
+            });
+            event.target.classList.add('active', 'bg-red-600', 'text-white');
+            event.target.classList.remove('bg-slate-800', 'text-slate-300');
+            filterDossier();
+        }
+
+        function filterDossier() {
+            const query = document.getElementById('search-input').value.toLowerCase().trim();
+            const items = document.querySelectorAll('.dossier-item');
+
+            items.forEach(item => {
+                const itemCategory = item.getAttribute('data-category');
+                const itemText = item.innerText.toLowerCase();
+                const matchesCategory = (activeCategory === 'all' || itemCategory === activeCategory);
+                const matchesQuery = (query === '' || itemText.includes(query));
+
+                if (matchesCategory && matchesQuery) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+
+        // QUOTES FILTER
+        function filterQuotes(author) {
+            document.querySelectorAll('.quote-filter-btn').forEach(btn => {
+                btn.classList.remove('bg-orange-600', 'text-white');
+                btn.classList.add('bg-slate-800', 'text-slate-300');
+            });
+            event.target.classList.add('bg-orange-600', 'text-white');
+            event.target.classList.remove('bg-slate-800', 'text-slate-300');
+
+            const cards = document.querySelectorAll('.quote-card');
+            cards.forEach(card => {
+                if (author === 'all' || card.getAttribute('data-author') === author) {
+                    card.style.display = 'flex';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        // TIMELINE FILTER
+        function filterTimeline(era) {
+            document.querySelectorAll('.timeline-filter-btn').forEach(btn => {
+                btn.classList.remove('bg-red-600', 'text-white');
+                btn.classList.add('bg-slate-800', 'text-slate-300');
+            });
+            event.target.classList.add('bg-red-600', 'text-white');
+            event.target.classList.remove('bg-slate-800', 'text-slate-300');
+
+            const events = document.querySelectorAll('.timeline-event-card');
+            events.forEach(item => {
+                const itemEra = item.getAttribute('data-era');
+                if (era === 'all' || itemEra === era) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+            lucide.createIcons();
+        }
+
+        // EVIDENCE MODAL DATA
+        const evidenceData = {
+            golpe: {
+                title: "Inquérito da Trama Golpista (PF & STF)",
+                badge: "Operação Contragolpe",
+                content: `
+                    <div class="space-y-4 text-sm text-slate-300">
+                        <p class="leading-relaxed">
+                            A Polícia Federal concluiu o indiciamento formal de Jair Bolsonaro, dos generais Walter Braga Netto, Augusto Heleno, Paulo Sérgio Nogueira e mais 33 investigados pelos crimes de <strong>tentativa de abolição violenta do Estado Democrático de Direito, golpe de Estado e organização criminosa</strong>.
+                        </p>
+                        <div class="bg-slate-900 border border-slate-800 p-4 rounded-xl space-y-2">
+                            <div class="text-xs font-mono font-bold text-red-400">PRINCIPAIS PROVAS COLETADAS:</div>
+                            <ul class="text-xs space-y-1.5 list-disc pl-4 text-slate-300">
+                                <li><strong>Minuta do Golpe:</strong> Documento apreendido e com alterações de texto feitas diretamente a pedido de Bolsonaro restringindo prisões de autoridades.</li>
+                                <li><strong>Operação Punhal Verde e Amarelo:</strong> Planejamento impresso no Palácio do Planalto prevendo o assassinato de Lula, Alckmin e Alexandre de Moraes por envenenamento ou armamento bélico pesado.</li>
+                                <li><strong>Gravação da Reunião Ministerial de 05/07/2022:</strong> Bolsonaro ordenando aos ministros e militares que agissem antes da eleição: <em>"Nós vamos ter que fazer alguma coisa antes das eleições (...) Se tiver que virar a mesa, é antes"</em>.</li>
+                                <li><strong>Mensagens de Mauro Cid:</strong> Trocas de áudios detalhando reuniões com comandantes das Forças Armadas para pressionar adesão ao plano.</li>
+                            </ul>
+                        </div>
+                    </div>
+                `
+            },
+            joias: {
+                title: "O Escândalo do Contrabando das Joias Árabes",
+                badge: "Operação Lucas 12:2",
+                content: `
+                    <div class="space-y-4 text-sm text-slate-300">
+                        <p class="leading-relaxed">
+                            A Polícia Federal indiciou Bolsonaro por <strong>peculato, associação criminosa e lavagem de dinheiro</strong> pelo desvio de pelo menos R$ 6,8 milhões em presentes de luxo ofertados por autoridades estrangeiras que pertenciam ao acervo público da Presidência da República.
+                        </p>
+                        <div class="bg-slate-900 border border-slate-800 p-4 rounded-xl space-y-2">
+                            <div class="text-xs font-mono font-bold text-amber-400">DOCUMENTOS E PROVAS:</div>
+                            <ul class="text-xs space-y-1.5 list-disc pl-4 text-slate-300">
+                                <li><strong>Reflexo em foto nos EUA:</strong> O general Mauro Lourena Cid fotografou a caixa de joias para venda nos EUA e seu rosto apareceu refletido no vidro do mostrador.</li>
+                                <li><strong>Recibo de recompra de Wassef:</strong> O advogado Frederick Wassef pagou US$ 49 mil em dinheiro vivo para resgatar o relógio Rolex nos EUA após a denúncia vir a público.</li>
+                                <li><strong>Depósitos e dinheiro em espécie:</strong> Áudios de Mauro Cid afirmando: <em>"Vinte e cinco mil dólares que era para o presidente em dinheiro vivo"</em>.</li>
+                            </ul>
+                        </div>
+                    </div>
+                `
+            },
+            vacinas: {
+                title: "Fraude nos Cartões de Vacinação do ConecteSUS",
+                badge: "Operação Venire",
+                content: `
+                    <div class="space-y-4 text-sm text-slate-300">
+                        <p class="leading-relaxed">
+                            Indiciamento formal de Jair Bolsonaro e Mauro Cid por <strong>inserção de dados falsos em sistema de informações e associação criminosa</strong>.
+                        </p>
+                        <div class="bg-slate-900 border border-slate-800 p-4 rounded-xl space-y-2">
+                            <div class="text-xs font-mono font-bold text-rose-400">PROVAS PERICIAIS:</div>
+                            <ul class="text-xs space-y-1.5 list-disc pl-4 text-slate-300">
+                                <li>Logs de acesso do Ministério da Saúde provam que doses inexistentes da vacina da Pfizer foram inseridas no sistema da prefeitura de Duque de Caxias e apagadas dias depois.</li>
+                                <li>Certificados de vacinação falsificados foram impressos dentro do Palácio do Alvorada no computador da Ajudância de Ordens.</li>
+                                <li>Uso dos dados falsos para entrada de Bolsonaro nos Estados Unidos em dezembro de 2022.</li>
+                            </ul>
+                        </div>
+                    </div>
+                `
+            },
+            abin: {
+                title: "ABIN Paralela e Monitoramento FirstMile",
+                badge: "Operação Vigilância Aproximada",
+                content: `
+                    <div class="space-y-4 text-sm text-slate-300">
+                        <p class="leading-relaxed">
+                            Uso ilegal da estrutura de inteligência do Estado brasileiro para espionar geolocalizações de desafetos, produzir relatórios para blindar os filhos de Bolsonaro e atacar ministros do TSE e STF.
+                        </p>
+                        <div class="bg-slate-900 border border-slate-800 p-4 rounded-xl space-y-2">
+                            <div class="text-xs font-mono font-bold text-indigo-400">ALVOS DA ESPIONAGEM CLANDESTINA:</div>
+                            <ul class="text-xs space-y-1.5 list-disc pl-4 text-slate-300">
+                                <li>Ministros Alexandre de Moraes, Luís Roberto Barroso e Gilmar Mendes.</li>
+                                <li>Jornalistas investigativos de veículos de imprensa (Mônica Bergamo, Aguirre Talento).</li>
+                                <li>Servidores do Ibama e auditores da Receita Federal que atuavam contra o garimpo ou investigavam patrimônio da família.</li>
+                            </ul>
+                        </div>
+                    </div>
+                `
+            }
+        };
+
+        function openEvidenceModal(key) {
+            const data = evidenceData[key];
+            if (!data) return;
+            const content = `
+                <div class="mb-4">
+                    <span class="text-[10px] font-mono font-bold px-2.5 py-1 rounded bg-red-950 text-red-300 border border-red-800">${data.badge}</span>
+                    <h3 class="text-xl sm:text-2xl font-bold text-white mt-2">${data.title}</h3>
+                </div>
+                ${data.content}
+            `;
+            document.getElementById('evidence-modal-content').innerHTML = content;
+            document.getElementById('evidence-modal').classList.remove('hidden');
+            document.getElementById('evidence-modal').classList.add('flex');
+            lucide.createIcons();
+        }
+
+        function closeEvidenceModal() {
+            document.getElementById('evidence-modal').classList.add('hidden');
+            document.getElementById('evidence-modal').classList.remove('flex');
+        }
+
+        // SHARE MODAL SCRIPT
+        function openShareModal() {
+            const url = encodeURIComponent(window.location.href);
+            const text = encodeURIComponent("Conheça o Dossiê do Extremismo no Brasil: todas as investigações, a prisão de Bolsonaro, o caso Banco Master e as falas dos aliados para não esquecer em 2026:");
+            document.getElementById('share-whatsapp').href = `https://api.whatsapp.com/send?text=${text}%20${url}`;
+            document.getElementById('share-telegram').href = `https://t.me/share/url?url=${url}&text=${text}`;
+            document.getElementById('share-twitter').href = `https://twitter.com/intent/tweet?text=${text}&url=${url}`;
+            document.getElementById('share-modal').classList.remove('hidden');
+            document.getElementById('share-modal').classList.add('flex');
+            lucide.createIcons();
+        }
+
+        function closeShareModal() {
+            document.getElementById('share-modal').classList.add('hidden');
+            document.getElementById('share-modal').classList.remove('flex');
+        }
+
+        function copyPageLink() {
+            navigator.clipboard.writeText(window.location.href);
+            const btn = document.getElementById('copy-btn');
+            btn.innerHTML = `<i data-lucide="check" class="w-4 h-4 text-emerald-400"></i> Link Copiado!`;
+            lucide.createIcons();
+            setTimeout(() => {
+                btn.innerHTML = `<i data-lucide="copy" class="w-4 h-4"></i> Copiar Link`;
+                lucide.createIcons();
+            }, 2500);
+        }
+
+        // QUIZ DATA & LOGIC
+        const quizQuestions = [
+            {
+                q: "Quem disse a famosa frase: 'Não sou coveiro, tá? Quer que eu faça o quê?' durante a pandemia de Covid-19?",
+                options: ["Eduardo Pazuello", "Jair Bolsonaro", "Ricardo Salles", "Arthur Lira"],
+                correct: 1,
+                explanation: "Jair Bolsonaro respondeu isso a repórteres em abril de 2020, quando o Brasil acabava de bater o recorde diário de mortes pela Covid-19."
+            },
+            {
+                q: "Qual era o objetivo da operação 'Punhal Verde e Amarelo' descoberta pela Polícia Federal?",
+                options: [
+                    "Criar um novo partido político militar",
+                    "Sequestrar e assassinar Lula, Geraldo Alckmin e Alexandre de Moraes para consumar o golpe",
+                    "Construir uma nova ferrovia na Amazônia",
+                    "Comprar vacinas em segredo fora do SUS"
+                ],
+                correct: 1,
+                explanation: "O plano golpista de integrantes dos 'Kids Pretos' do Exército previa execuções com veneno e armamento bélico pesado em dezembro de 2022."
+            },
+            {
+                q: "O que a investigação do portal UOL revelou sobre o patrimônio da família Bolsonaro em 2022?",
+                options: [
+                    "Que todas as compras foram feitas com cartão corporativo",
+                    "Que pelo menos 51 imóveis foram comprados com dinheiro em espécie (moeda viva)",
+                    "Que eles não tinham nenhum imóvel registrado",
+                    "Que os imóveis eram todos doações estrangeiras"
+                ],
+                correct: 1,
+                explanation: "A apuração documental em cartórios comprovou que 51 de 107 imóveis do clã foram quitados total ou parcialmente com malas de dinheiro vivo."
+            },
+            {
+                q: "Qual ministro do Meio Ambiente sugeriu 'ir passando a boiada' enquanto a imprensa cobria a pandemia?",
+                options: ["Marcos Pontes", "Ricardo Salles", "Ernesto Araújo", "Bento Albuquerque"],
+                correct: 1,
+                explanation: "Ricardo Salles disse isso na famosa reunião ministerial de 22 de abril de 2020 para desregular normas de proteção ambiental."
+            },
+            {
+                q: "Por qual motivo o Tribunal Superior Eleitoral (TSE) declarou Jair Bolsonaro inelegível até 2030?",
+                options: [
+                    "Atraso na entrega de declaração de imposto de renda",
+                    "Uso da estrutura pública para reunião com embaixadores disseminando fake news contra as urnas eletrônicas",
+                    "Falta de filiação partidária válida",
+                    "Gastos excessivos em viagens internacionais de férias"
+                ],
+                correct: 1,
+                explanation: "O TSE condenou Bolsonaro por abuso de poder político e uso indevido dos meios de comunicação na TV Brasil para atacar o sistema eleitoral."
+            }
+        ];
+
+        let currentQuizIndex = 0;
+        let quizScore = 0;
+
+        function loadQuestion() {
+            const q = quizQuestions[currentQuizIndex];
+            document.getElementById('quiz-step').innerText = `Pergunta ${currentQuizIndex + 1} de ${quizQuestions.length}`;
+            document.getElementById('quiz-score').innerText = `Acertos: ${quizScore}`;
+            document.getElementById('quiz-question').innerText = q.q;
+            
+            const optionsContainer = document.getElementById('quiz-options');
+            optionsContainer.innerHTML = '';
+            
+            q.options.forEach((opt, idx) => {
+                const btn = document.createElement('button');
+                btn.className = "w-full text-left p-3.5 rounded-xl bg-slate-900 hover:bg-slate-800 border border-slate-700 text-slate-200 text-xs sm:text-sm font-medium transition-all";
+                btn.innerText = opt;
+                btn.onclick = () => selectQuizOption(idx);
+                optionsContainer.appendChild(btn);
+            });
+
+            document.getElementById('quiz-feedback').classList.add('hidden');
+            document.getElementById('quiz-next-btn').classList.add('hidden');
+        }
+
+        function selectQuizOption(selectedIdx) {
+            const q = quizQuestions[currentQuizIndex];
+            const buttons = document.querySelectorAll('#quiz-options button');
+            buttons.forEach(btn => btn.disabled = true);
+
+            const feedback = document.getElementById('quiz-feedback');
+            feedback.classList.remove('hidden');
+
+            if (selectedIdx === q.correct) {
+                quizScore++;
+                buttons[selectedIdx].classList.remove('bg-slate-900', 'border-slate-700');
+                buttons[selectedIdx].classList.add('bg-emerald-950', 'border-emerald-600', 'text-emerald-300');
+                feedback.className = "mt-6 p-4 rounded-xl text-xs sm:text-sm bg-emerald-950/80 border border-emerald-700 text-emerald-200";
+                feedback.innerHTML = `<strong>Correto!</strong> ${q.explanation}`;
+            } else {
+                buttons[selectedIdx].classList.remove('bg-slate-900', 'border-slate-700');
+                buttons[selectedIdx].classList.add('bg-red-950', 'border-red-600', 'text-red-300');
+                buttons[q.correct].classList.remove('bg-slate-900', 'border-slate-700');
+                buttons[q.correct].classList.add('bg-emerald-950', 'border-emerald-600', 'text-emerald-300');
+                feedback.className = "mt-6 p-4 rounded-xl text-xs sm:text-sm bg-red-950/80 border border-red-700 text-red-200";
+                feedback.innerHTML = `<strong>Incorreto!</strong> ${q.explanation}`;
+            }
+
+            document.getElementById('quiz-score').innerText = `Acertos: ${quizScore}`;
+            document.getElementById('quiz-next-btn').classList.remove('hidden');
+        }
+
+        function nextQuestion() {
+            currentQuizIndex++;
+            if (currentQuizIndex < quizQuestions.length) {
+                loadQuestion();
+            } else {
+                showQuizResult();
+            }
+        }
+
+        function showQuizResult() {
+            document.getElementById('quiz-step').innerText = "Resultado Final";
+            document.getElementById('quiz-question').innerText = `Você acertou ${quizScore} de ${quizQuestions.length} perguntas!`;
+            
+            let message = "";
+            if (quizScore === 5) {
+                message = "Excelente memória cívica! Você conhece a fundo os fatos e não se deixa enganar pelo discurso da extrema direita.";
+            } else if (quizScore >= 3) {
+                message = "Bom conhecimento! Compartilhe a página para revisar todos os detalhes e ajudar mais pessoas a lembrarem dos fatos.";
+            } else {
+                message = "É fundamental revisar o dossiê! A desinformação tenta apagar esses fatos da memória coletiva do Brasil.";
+            }
+
+            document.getElementById('quiz-options').innerHTML = `
+                <div class="p-6 rounded-2xl bg-indigo-950/60 border border-indigo-700/60 text-slate-200 text-sm leading-relaxed">
+                    ${message}
+                </div>
+            `;
+            document.getElementById('quiz-feedback').classList.add('hidden');
+            const nextBtn = document.getElementById('quiz-next-btn');
+            nextBtn.innerText = "Reiniciar Quiz";
+            nextBtn.onclick = () => {
+                currentQuizIndex = 0;
+                quizScore = 0;
+                nextBtn.innerText = "Próxima Pergunta →";
+                loadQuestion();
+            };
+        }
+
+        loadQuestion();
+    </script>
+</body>
+</html>
+
